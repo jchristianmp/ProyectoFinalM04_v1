@@ -1,0 +1,83 @@
+[2025-01-01T23:42:33.844+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-01T23:42:33.877+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: prediction_dag_v1.predict_model manual__2025-01-01T23:42:28.302681+00:00 [queued]>
+[2025-01-01T23:42:33.893+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: prediction_dag_v1.predict_model manual__2025-01-01T23:42:28.302681+00:00 [queued]>
+[2025-01-01T23:42:33.895+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-01T23:42:33.924+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): predict_model> on 2025-01-01 23:42:28.302681+00:00
+[2025-01-01T23:42:33.941+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=791) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-01T23:42:33.946+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'prediction_dag_v1', 'predict_model', 'manual__2025-01-01T23:42:28.302681+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/02_prediction/02_prediction_v1.py', '--cfg-path', '/tmp/tmpiehlkugr']
+[2025-01-01T23:42:33.947+0000] {standard_task_runner.py:72} INFO - Started process 793 to run task
+[2025-01-01T23:42:33.964+0000] {standard_task_runner.py:105} INFO - Job 31: Subtask predict_model
+[2025-01-01T23:42:34.085+0000] {task_command.py:467} INFO - Running <TaskInstance: prediction_dag_v1.predict_model manual__2025-01-01T23:42:28.302681+00:00 [running]> on host 24eea4b1b7f8
+[2025-01-01T23:42:34.765+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='cm' AIRFLOW_CTX_DAG_ID='prediction_dag_v1' AIRFLOW_CTX_TASK_ID='predict_model' AIRFLOW_CTX_EXECUTION_DATE='2025-01-01T23:42:28.302681+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-01T23:42:28.302681+00:00'
+[2025-01-01T23:42:34.770+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-01T23:42:34.771+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-01T23:42:34.774+0000] {logging_mixin.py:190} INFO - Current task name:predict_model state:running start_date:2025-01-01 23:42:33.878999+00:00
+[2025-01-01T23:42:34.784+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 and current dag run status:running
+[2025-01-01T23:42:34.785+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-01T23:42:34.786+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvy4i40hww --system-site-packages --python=python
+[2025-01-01T23:42:34.788+0000] {process_utils.py:190} INFO - Output:
+[2025-01-01T23:42:35.535+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.7.final.0-64 in 174ms
+[2025-01-01T23:42:35.536+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venvy4i40hww, clear=False, no_vcs_ignore=False, global=True)
+[2025-01-01T23:42:35.538+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2025-01-01T23:42:35.539+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2025-01-01T23:42:35.542+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2025-01-01T23:42:35.567+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvy4i40hww/bin/pip install -r /tmp/venvy4i40hww/requirements.txt
+[2025-01-01T23:42:35.569+0000] {process_utils.py:190} INFO - Output:
+[2025-01-01T23:42:37.155+0000] {process_utils.py:194} INFO - Collecting feature-engine==1.8.2 (from -r /tmp/venvy4i40hww/requirements.txt (line 1))
+[2025-01-01T23:42:37.157+0000] {process_utils.py:194} INFO -   Using cached feature_engine-1.8.2-py2.py3-none-any.whl.metadata (9.9 kB)
+[2025-01-01T23:42:37.202+0000] {process_utils.py:194} INFO - Collecting joblib==1.3.2 (from -r /tmp/venvy4i40hww/requirements.txt (line 2))
+[2025-01-01T23:42:37.203+0000] {process_utils.py:194} INFO -   Using cached joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+[2025-01-01T23:42:37.206+0000] {process_utils.py:194} INFO - Requirement already satisfied: numpy==1.26.4 in /home/***/.local/lib/python3.12/site-packages (from -r /tmp/venvy4i40hww/requirements.txt (line 3)) (1.26.4)
+[2025-01-01T23:42:37.347+0000] {process_utils.py:194} INFO - Collecting pandas==2.2.3 (from -r /tmp/venvy4i40hww/requirements.txt (line 4))
+[2025-01-01T23:42:37.349+0000] {process_utils.py:194} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2025-01-01T23:42:37.387+0000] {process_utils.py:194} INFO - Requirement already satisfied: pendulum in /home/***/.local/lib/python3.12/site-packages (from -r /tmp/venvy4i40hww/requirements.txt (line 5)) (3.0.0)
+[2025-01-01T23:42:37.500+0000] {process_utils.py:194} INFO - Collecting scikit-learn==1.5.2 (from -r /tmp/venvy4i40hww/requirements.txt (line 6))
+[2025-01-01T23:42:37.501+0000] {process_utils.py:194} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2025-01-01T23:42:37.660+0000] {process_utils.py:194} INFO - Collecting scipy>=1.4.1 (from feature-engine==1.8.2->-r /tmp/venvy4i40hww/requirements.txt (line 1))
+[2025-01-01T23:42:37.661+0000] {process_utils.py:194} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2025-01-01T23:42:37.755+0000] {process_utils.py:194} INFO - Collecting statsmodels>=0.11.1 (from feature-engine==1.8.2->-r /tmp/venvy4i40hww/requirements.txt (line 1))
+[2025-01-01T23:42:37.756+0000] {process_utils.py:194} INFO -   Using cached statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
+[2025-01-01T23:42:37.767+0000] {process_utils.py:194} INFO - Requirement already satisfied: python-dateutil>=2.8.2 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.2.3->-r /tmp/venvy4i40hww/requirements.txt (line 4)) (2.9.0.post0)
+[2025-01-01T23:42:37.768+0000] {process_utils.py:194} INFO - Requirement already satisfied: pytz>=2020.1 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.2.3->-r /tmp/venvy4i40hww/requirements.txt (line 4)) (2024.2)
+[2025-01-01T23:42:37.769+0000] {process_utils.py:194} INFO - Requirement already satisfied: tzdata>=2022.7 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.2.3->-r /tmp/venvy4i40hww/requirements.txt (line 4)) (2024.2)
+[2025-01-01T23:42:37.796+0000] {process_utils.py:194} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn==1.5.2->-r /tmp/venvy4i40hww/requirements.txt (line 6))
+[2025-01-01T23:42:37.797+0000] {process_utils.py:194} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2025-01-01T23:42:37.806+0000] {process_utils.py:194} INFO - Requirement already satisfied: time-machine>=2.6.0 in /home/***/.local/lib/python3.12/site-packages (from pendulum->-r /tmp/venvy4i40hww/requirements.txt (line 5)) (2.16.0)
+[2025-01-01T23:42:37.813+0000] {process_utils.py:194} INFO - Requirement already satisfied: six>=1.5 in /home/***/.local/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas==2.2.3->-r /tmp/venvy4i40hww/requirements.txt (line 4)) (1.16.0)
+[2025-01-01T23:42:37.878+0000] {process_utils.py:194} INFO - Collecting patsy>=0.5.6 (from statsmodels>=0.11.1->feature-engine==1.8.2->-r /tmp/venvy4i40hww/requirements.txt (line 1))
+[2025-01-01T23:42:37.881+0000] {process_utils.py:194} INFO -   Using cached patsy-1.0.1-py2.py3-none-any.whl.metadata (3.3 kB)
+[2025-01-01T23:42:37.886+0000] {process_utils.py:194} INFO - Requirement already satisfied: packaging>=21.3 in /home/***/.local/lib/python3.12/site-packages (from statsmodels>=0.11.1->feature-engine==1.8.2->-r /tmp/venvy4i40hww/requirements.txt (line 1)) (24.1)
+[2025-01-01T23:42:37.894+0000] {process_utils.py:194} INFO - Using cached feature_engine-1.8.2-py2.py3-none-any.whl (374 kB)
+[2025-01-01T23:42:37.898+0000] {process_utils.py:194} INFO - Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+[2025-01-01T23:42:37.901+0000] {process_utils.py:194} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2025-01-01T23:42:37.916+0000] {process_utils.py:194} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2025-01-01T23:42:37.935+0000] {process_utils.py:194} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2025-01-01T23:42:37.989+0000] {process_utils.py:194} INFO - Using cached statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.7 MB)
+[2025-01-01T23:42:37.999+0000] {process_utils.py:194} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2025-01-01T23:42:38.000+0000] {process_utils.py:194} INFO - Using cached patsy-1.0.1-py2.py3-none-any.whl (232 kB)
+[2025-01-01T23:42:38.796+0000] {process_utils.py:194} INFO - Installing collected packages: threadpoolctl, scipy, patsy, joblib, scikit-learn, pandas, statsmodels, feature-engine
+[2025-01-01T23:42:45.680+0000] {process_utils.py:194} INFO -   Attempting uninstall: pandas
+[2025-01-01T23:42:45.686+0000] {process_utils.py:194} INFO -     Found existing installation: pandas 2.1.4
+[2025-01-01T23:42:45.686+0000] {process_utils.py:194} INFO -     Not uninstalling pandas at /home/***/.local/lib/python3.12/site-packages, outside environment /tmp/venvy4i40hww
+[2025-01-01T23:42:45.687+0000] {process_utils.py:194} INFO -     Can't uninstall 'pandas'. No files were found to uninstall.
+[2025-01-01T23:42:54.260+0000] {process_utils.py:194} INFO - ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+[2025-01-01T23:42:54.261+0000] {process_utils.py:194} INFO - apache-***-providers-google 10.25.0 requires pandas<2.2,>=2.1.2; python_version >= "3.9", but you have pandas 2.2.3 which is incompatible.
+[2025-01-01T23:42:54.262+0000] {process_utils.py:194} INFO - apache-***-providers-snowflake 5.8.0 requires pandas<2.2,>=2.1.2; python_version >= "3.9", but you have pandas 2.2.3 which is incompatible.
+[2025-01-01T23:42:54.262+0000] {process_utils.py:194} INFO - Successfully installed feature-engine-1.8.2 joblib-1.3.2 pandas-2.2.3 patsy-1.0.1 scikit-learn-1.5.2 scipy-1.14.1 statsmodels-0.14.4 threadpoolctl-3.5.0
+[2025-01-01T23:42:54.602+0000] {python.py:513} INFO - Use 'pickle' as serializer.
+[2025-01-01T23:42:54.621+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvy4i40hww/bin/python /tmp/venv-calloxpf0f32/script.py /tmp/venv-calloxpf0f32/script.in /tmp/venv-calloxpf0f32/script.out /tmp/venv-calloxpf0f32/string_args.txt /tmp/venv-calloxpf0f32/termination.log
+[2025-01-01T23:42:54.622+0000] {process_utils.py:190} INFO - Output:
+[2025-01-01T23:42:56.193+0000] {process_utils.py:194} INFO - /home/***/.local/lib/python3.12/site-packages/***/configuration.py:859 FutureWarning: section/key [core/sql_alchemy_conn] has been deprecated, you should use[database/sql_alchemy_conn] instead. Please update your `conf.get*` call to use the new name
+[2025-01-01T23:42:58.309+0000] {process_utils.py:194} INFO - 2025-01-01
+[2025-01-01T23:42:59.158+0000] {python.py:240} INFO - Done. Returned value was: Sin predicción
+[2025-01-01T23:42:59.181+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-01T23:42:59.182+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=prediction_dag_v1, task_id=predict_model, run_id=manual__2025-01-01T23:42:28.302681+00:00, execution_date=20250101T234228, start_date=20250101T234233, end_date=20250101T234259
+[2025-01-01T23:42:59.191+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-01T23:42:59.192+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-01T23:42:59.193+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 queued_at:2025-01-01 23:42:28.310950+00:00
+[2025-01-01T23:42:59.193+0000] {logging_mixin.py:190} INFO - Task hostname:24eea4b1b7f8 operator:_PythonVirtualenvDecoratedOperator
+[2025-01-01T23:42:59.215+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-01T23:42:59.238+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-01T23:42:59.241+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

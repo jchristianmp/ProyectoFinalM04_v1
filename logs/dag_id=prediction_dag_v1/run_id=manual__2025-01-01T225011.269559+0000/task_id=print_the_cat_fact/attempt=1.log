@@ -1,0 +1,29 @@
+[2025-01-01T22:50:15.297+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-01T22:50:15.312+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: prediction_dag_v1.print_the_cat_fact manual__2025-01-01T22:50:11.269559+00:00 [queued]>
+[2025-01-01T22:50:15.319+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: prediction_dag_v1.print_the_cat_fact manual__2025-01-01T22:50:11.269559+00:00 [queued]>
+[2025-01-01T22:50:15.319+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-01T22:50:15.330+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): print_the_cat_fact> on 2025-01-01 22:50:11.269559+00:00
+[2025-01-01T22:50:15.336+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2289) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-01T22:50:15.337+0000] {standard_task_runner.py:72} INFO - Started process 2295 to run task
+[2025-01-01T22:50:15.339+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'prediction_dag_v1', 'print_the_cat_fact', 'manual__2025-01-01T22:50:11.269559+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/02_prediction/02_prediction_v1.py', '--cfg-path', '/tmp/tmpzlirwj7k']
+[2025-01-01T22:50:15.341+0000] {standard_task_runner.py:105} INFO - Job 39: Subtask print_the_cat_fact
+[2025-01-01T22:50:15.381+0000] {task_command.py:467} INFO - Running <TaskInstance: prediction_dag_v1.print_the_cat_fact manual__2025-01-01T22:50:11.269559+00:00 [running]> on host 935cb972f608
+[2025-01-01T22:50:15.447+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='cm' AIRFLOW_CTX_DAG_ID='prediction_dag_v1' AIRFLOW_CTX_TASK_ID='print_the_cat_fact' AIRFLOW_CTX_EXECUTION_DATE='2025-01-01T22:50:11.269559+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-01T22:50:11.269559+00:00'
+[2025-01-01T22:50:15.448+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-01T22:50:15.449+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-01T22:50:15.449+0000] {logging_mixin.py:190} INFO - Current task name:print_the_cat_fact state:running start_date:2025-01-01 22:50:15.313327+00:00
+[2025-01-01T22:50:15.449+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 and current dag run status:running
+[2025-01-01T22:50:15.450+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-01T22:50:15.451+0000] {logging_mixin.py:190} INFO - valor:  _TaskDecorator(function=<function task_predict_model at 0x7fd61e597f60>, operator_class=<class '***.decorators.python_virtualenv._PythonVirtualenvDecoratedOperator'>, multiple_outputs=False, kwargs={'task_id': 'predict_model', 'requirements': ['pandas==2.2.3', 'joblib==1.3.2', 'feature-engine==1.8.2', 'scikit-learn==1.5.2', 'numpy==1.26.4', 'pendulum'], 'system_site_packages': True}, is_setup=False, is_teardown=False, on_failure_fail_dagrun=False)
+[2025-01-01T22:50:15.451+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-01T22:50:15.459+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-01T22:50:15.460+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=prediction_dag_v1, task_id=print_the_cat_fact, run_id=manual__2025-01-01T22:50:11.269559+00:00, execution_date=20250101T225011, start_date=20250101T225015, end_date=20250101T225015
+[2025-01-01T22:50:15.470+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-01T22:50:15.471+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-01T22:50:15.471+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 queued_at:2025-01-01 22:50:11.283681+00:00
+[2025-01-01T22:50:15.472+0000] {logging_mixin.py:190} INFO - Task hostname:935cb972f608 operator:_PythonDecoratedOperator
+[2025-01-01T22:50:15.514+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-01T22:50:15.530+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-01T22:50:15.559+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

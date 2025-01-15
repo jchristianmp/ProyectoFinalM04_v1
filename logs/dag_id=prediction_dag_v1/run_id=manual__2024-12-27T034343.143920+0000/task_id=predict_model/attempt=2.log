@@ -1,0 +1,210 @@
+[2024-12-27T03:44:31.317+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-27T03:44:31.339+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: prediction_dag_v1.predict_model manual__2024-12-27T03:43:43.143920+00:00 [queued]>
+[2024-12-27T03:44:31.348+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: prediction_dag_v1.predict_model manual__2024-12-27T03:43:43.143920+00:00 [queued]>
+[2024-12-27T03:44:31.349+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-12-27T03:44:31.370+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): predict_model> on 2024-12-27 03:43:43.143920+00:00
+[2024-12-27T03:44:31.378+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=302) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-27T03:44:31.380+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'prediction_dag_v1', 'predict_model', 'manual__2024-12-27T03:43:43.143920+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/02_prediction/02_prediction_v1.py', '--cfg-path', '/tmp/tmpvzaff44h']
+[2024-12-27T03:44:31.381+0000] {standard_task_runner.py:72} INFO - Started process 304 to run task
+[2024-12-27T03:44:31.382+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask predict_model
+[2024-12-27T03:44:31.460+0000] {task_command.py:467} INFO - Running <TaskInstance: prediction_dag_v1.predict_model manual__2024-12-27T03:43:43.143920+00:00 [running]> on host f83652127260
+[2024-12-27T03:44:31.882+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='cm' AIRFLOW_CTX_DAG_ID='prediction_dag_v1' AIRFLOW_CTX_TASK_ID='predict_model' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T03:43:43.143920+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T03:43:43.143920+00:00'
+[2024-12-27T03:44:31.885+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-27T03:44:31.887+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-27T03:44:31.889+0000] {logging_mixin.py:190} INFO - Current task name:predict_model state:running start_date:2024-12-27 03:44:31.339889+00:00
+[2024-12-27T03:44:31.891+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 and current dag run status:running
+[2024-12-27T03:44:31.892+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-27T03:44:31.894+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv_92xe5x3 --python=python
+[2024-12-27T03:44:31.896+0000] {process_utils.py:190} INFO - Output:
+[2024-12-27T03:44:32.832+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.7.final.0-64 in 197ms
+[2024-12-27T03:44:32.841+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venv_92xe5x3, clear=False, no_vcs_ignore=False, global=False)
+[2024-12-27T03:44:32.847+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-12-27T03:44:32.848+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2024-12-27T03:44:32.851+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-12-27T03:44:32.863+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venv_92xe5x3/bin/pip install -r /tmp/venv_92xe5x3/requirements.txt
+[2024-12-27T03:44:32.864+0000] {process_utils.py:190} INFO - Output:
+[2024-12-27T03:44:34.737+0000] {process_utils.py:194} INFO - Collecting feature-engine==1.8.2 (from -r /tmp/venv_92xe5x3/requirements.txt (line 1))
+[2024-12-27T03:44:34.739+0000] {process_utils.py:194} INFO -   Using cached feature_engine-1.8.2-py2.py3-none-any.whl.metadata (9.9 kB)
+[2024-12-27T03:44:34.786+0000] {process_utils.py:194} INFO - Collecting joblib==1.3.2 (from -r /tmp/venv_92xe5x3/requirements.txt (line 2))
+[2024-12-27T03:44:34.788+0000] {process_utils.py:194} INFO -   Using cached joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-12-27T03:44:34.992+0000] {process_utils.py:194} INFO - Collecting numpy==1.26.4 (from -r /tmp/venv_92xe5x3/requirements.txt (line 3))
+[2024-12-27T03:44:34.998+0000] {process_utils.py:194} INFO -   Using cached numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+[2024-12-27T03:44:35.260+0000] {process_utils.py:194} INFO - Collecting pandas==2.2.3 (from -r /tmp/venv_92xe5x3/requirements.txt (line 4))
+[2024-12-27T03:44:35.265+0000] {process_utils.py:194} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2024-12-27T03:44:35.463+0000] {process_utils.py:194} INFO - Collecting scikit-learn==1.5.2 (from -r /tmp/venv_92xe5x3/requirements.txt (line 5))
+[2024-12-27T03:44:35.466+0000] {process_utils.py:194} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2024-12-27T03:44:35.649+0000] {process_utils.py:194} INFO - Collecting scipy>=1.4.1 (from feature-engine==1.8.2->-r /tmp/venv_92xe5x3/requirements.txt (line 1))
+[2024-12-27T03:44:35.652+0000] {process_utils.py:194} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-12-27T03:44:35.783+0000] {process_utils.py:194} INFO - Collecting statsmodels>=0.11.1 (from feature-engine==1.8.2->-r /tmp/venv_92xe5x3/requirements.txt (line 1))
+[2024-12-27T03:44:35.785+0000] {process_utils.py:194} INFO -   Using cached statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
+[2024-12-27T03:44:35.864+0000] {process_utils.py:194} INFO - Collecting python-dateutil>=2.8.2 (from pandas==2.2.3->-r /tmp/venv_92xe5x3/requirements.txt (line 4))
+[2024-12-27T03:44:35.867+0000] {process_utils.py:194} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-12-27T03:44:35.985+0000] {process_utils.py:194} INFO - Collecting pytz>=2020.1 (from pandas==2.2.3->-r /tmp/venv_92xe5x3/requirements.txt (line 4))
+[2024-12-27T03:44:35.991+0000] {process_utils.py:194} INFO -   Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2024-12-27T03:44:36.069+0000] {process_utils.py:194} INFO - Collecting tzdata>=2022.7 (from pandas==2.2.3->-r /tmp/venv_92xe5x3/requirements.txt (line 4))
+[2024-12-27T03:44:36.072+0000] {process_utils.py:194} INFO -   Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-12-27T03:44:36.141+0000] {process_utils.py:194} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn==1.5.2->-r /tmp/venv_92xe5x3/requirements.txt (line 5))
+[2024-12-27T03:44:36.142+0000] {process_utils.py:194} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-12-27T03:44:36.181+0000] {process_utils.py:194} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.2.3->-r /tmp/venv_92xe5x3/requirements.txt (line 4))
+[2024-12-27T03:44:36.183+0000] {process_utils.py:194} INFO -   Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+[2024-12-27T03:44:36.268+0000] {process_utils.py:194} INFO - Collecting patsy>=0.5.6 (from statsmodels>=0.11.1->feature-engine==1.8.2->-r /tmp/venv_92xe5x3/requirements.txt (line 1))
+[2024-12-27T03:44:36.270+0000] {process_utils.py:194} INFO -   Using cached patsy-1.0.1-py2.py3-none-any.whl.metadata (3.3 kB)
+[2024-12-27T03:44:36.311+0000] {process_utils.py:194} INFO - Collecting packaging>=21.3 (from statsmodels>=0.11.1->feature-engine==1.8.2->-r /tmp/venv_92xe5x3/requirements.txt (line 1))
+[2024-12-27T03:44:36.314+0000] {process_utils.py:194} INFO -   Using cached packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+[2024-12-27T03:44:36.333+0000] {process_utils.py:194} INFO - Using cached feature_engine-1.8.2-py2.py3-none-any.whl (374 kB)
+[2024-12-27T03:44:36.335+0000] {process_utils.py:194} INFO - Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+[2024-12-27T03:44:36.337+0000] {process_utils.py:194} INFO - Using cached numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+[2024-12-27T03:44:36.353+0000] {process_utils.py:194} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2024-12-27T03:44:36.365+0000] {process_utils.py:194} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2024-12-27T03:44:36.378+0000] {process_utils.py:194} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-12-27T03:44:36.380+0000] {process_utils.py:194} INFO - Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2024-12-27T03:44:36.382+0000] {process_utils.py:194} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2024-12-27T03:44:36.420+0000] {process_utils.py:194} INFO - Using cached statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.7 MB)
+[2024-12-27T03:44:36.442+0000] {process_utils.py:194} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-12-27T03:44:36.444+0000] {process_utils.py:194} INFO - Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2024-12-27T03:44:36.447+0000] {process_utils.py:194} INFO - Using cached packaging-24.2-py3-none-any.whl (65 kB)
+[2024-12-27T03:44:36.449+0000] {process_utils.py:194} INFO - Using cached patsy-1.0.1-py2.py3-none-any.whl (232 kB)
+[2024-12-27T03:44:36.452+0000] {process_utils.py:194} INFO - Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+[2024-12-27T03:44:36.688+0000] {process_utils.py:194} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, packaging, numpy, joblib, scipy, python-dateutil, patsy, scikit-learn, pandas, statsmodels, feature-engine
+[2024-12-27T03:44:55.728+0000] {process_utils.py:194} INFO - Successfully installed feature-engine-1.8.2 joblib-1.3.2 numpy-1.26.4 packaging-24.2 pandas-2.2.3 patsy-1.0.1 python-dateutil-2.9.0.post0 pytz-2024.2 scikit-learn-1.5.2 scipy-1.14.1 six-1.17.0 statsmodels-0.14.4 threadpoolctl-3.5.0 tzdata-2024.2
+[2024-12-27T03:44:56.478+0000] {python.py:513} INFO - Use 'pickle' as serializer.
+[2024-12-27T03:44:56.518+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venv_92xe5x3/bin/python /tmp/venv-callar78yrmt/script.py /tmp/venv-callar78yrmt/script.in /tmp/venv-callar78yrmt/script.out /tmp/venv-callar78yrmt/string_args.txt /tmp/venv-callar78yrmt/termination.log
+[2024-12-27T03:44:56.529+0000] {process_utils.py:190} INFO - Output:
+[2024-12-27T03:44:58.028+0000] {process_utils.py:194} INFO - Traceback (most recent call last):
+[2024-12-27T03:44:58.030+0000] {process_utils.py:194} INFO -   File "/tmp/venv-callar78yrmt/script.py", line 53, in <module>
+[2024-12-27T03:44:58.040+0000] {process_utils.py:194} INFO -     res = task_predict_model(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-12-27T03:44:58.043+0000] {process_utils.py:194} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T03:44:58.046+0000] {process_utils.py:194} INFO -   File "/tmp/venv-callar78yrmt/script.py", line 30, in task_predict_model
+[2024-12-27T03:44:58.052+0000] {process_utils.py:194} INFO -     predicciones = pipeline_de_produccion.predict(data)
+[2024-12-27T03:44:58.059+0000] {process_utils.py:194} INFO -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T03:44:58.062+0000] {process_utils.py:194} INFO -   File "/tmp/venv_92xe5x3/lib/python3.12/site-packages/sklearn/pipeline.py", line 600, in predict
+[2024-12-27T03:44:58.068+0000] {process_utils.py:194} INFO -     Xt = transform.transform(Xt)
+[2024-12-27T03:44:58.069+0000] {process_utils.py:194} INFO -          ^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T03:44:58.071+0000] {process_utils.py:194} INFO -   File "/tmp/venv_92xe5x3/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+[2024-12-27T03:44:58.072+0000] {process_utils.py:194} INFO -     data_to_wrap = f(self, X, *args, **kwargs)
+[2024-12-27T03:44:58.074+0000] {process_utils.py:194} INFO -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T03:44:58.076+0000] {process_utils.py:194} INFO -   File "/tmp/venv_92xe5x3/lib/python3.12/site-packages/feature_engine/transformation/yeojohnson.py", line 157, in transform
+[2024-12-27T03:44:58.078+0000] {process_utils.py:194} INFO -     X = self._check_transform_input_and_state(X)
+[2024-12-27T03:44:58.079+0000] {process_utils.py:194} INFO -         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-12-27T03:44:58.080+0000] {process_utils.py:194} INFO -   File "/tmp/venv_92xe5x3/lib/python3.12/site-packages/feature_engine/_base_transformers/base_numerical.py", line 109, in _check_transform_input_and_state
+[2024-12-27T03:44:58.082+0000] {process_utils.py:194} INFO -     _check_X_matches_training_df(X, self.n_features_in_)
+[2024-12-27T03:44:58.083+0000] {process_utils.py:194} INFO -   File "/tmp/venv_92xe5x3/lib/python3.12/site-packages/feature_engine/dataframe_checks.py", line 239, in _check_X_matches_training_df
+[2024-12-27T03:44:58.085+0000] {process_utils.py:194} INFO -     raise ValueError(
+[2024-12-27T03:44:58.086+0000] {process_utils.py:194} INFO - ValueError: The number of columns in this dataset is different from the one used to fit this transformer (when using the fit() method).
+[2024-12-27T03:44:58.576+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 870, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 588, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+The number of columns in this dataset is different from the one used to fit this transformer (when using the fit() method).
+[2024-12-27T03:44:58.583+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-12-27T03:44:58.584+0000] {logging_mixin.py:190} INFO - Task start:2024-12-27 03:44:31.339889+00:00 end:2024-12-27 03:44:58.583066+00:00 duration:27.243177
+[2024-12-27T03:44:58.586+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonVirtualenvDecoratedOperator): predict_model> dag:<DAG: prediction_dag_v1> dagrun:<DagRun prediction_dag_v1 @ 2024-12-27 03:43:43.143920+00:00: manual__2024-12-27T03:43:43.143920+00:00, state:running, queued_at: 2024-12-27 03:43:43.156547+00:00. externally triggered: True>
+[2024-12-27T03:44:58.587+0000] {logging_mixin.py:190} INFO - Failure caused by Process returned non-zero exit status 1.
+The number of columns in this dataset is different from the one used to fit this transformer (when using the fit() method).
+[2024-12-27T03:44:58.588+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=prediction_dag_v1, task_id=predict_model, run_id=manual__2024-12-27T03:43:43.143920+00:00, execution_date=20241227T034343, start_date=20241227T034431, end_date=20241227T034458
+[2024-12-27T03:44:58.617+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-27T03:44:58.619+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 6 for task predict_model (Process returned non-zero exit status 1.
+The number of columns in this dataset is different from the one used to fit this transformer (when using the fit() method).; 304)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 870, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 588, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+The number of columns in this dataset is different from the one used to fit this transformer (when using the fit() method).
+[2024-12-27T03:44:58.798+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-27T03:44:58.831+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-27T03:44:58.837+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

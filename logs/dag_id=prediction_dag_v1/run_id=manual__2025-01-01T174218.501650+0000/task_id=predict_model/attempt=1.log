@@ -1,0 +1,627 @@
+[2025-01-01T17:42:25.098+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-01T17:42:25.125+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: prediction_dag_v1.predict_model manual__2025-01-01T17:42:18.501650+00:00 [queued]>
+[2025-01-01T17:42:25.143+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: prediction_dag_v1.predict_model manual__2025-01-01T17:42:18.501650+00:00 [queued]>
+[2025-01-01T17:42:25.146+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-01T17:42:25.168+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): predict_model> on 2025-01-01 17:42:18.501650+00:00
+[2025-01-01T17:42:25.179+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=789) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-01T17:42:25.181+0000] {standard_task_runner.py:72} INFO - Started process 791 to run task
+[2025-01-01T17:42:25.181+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'prediction_dag_v1', 'predict_model', 'manual__2025-01-01T17:42:18.501650+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/02_prediction/02_prediction_v1.py', '--cfg-path', '/tmp/tmpe3il0r0m']
+[2025-01-01T17:42:25.183+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask predict_model
+[2025-01-01T17:42:25.267+0000] {task_command.py:467} INFO - Running <TaskInstance: prediction_dag_v1.predict_model manual__2025-01-01T17:42:18.501650+00:00 [running]> on host cbeec914397d
+[2025-01-01T17:42:25.788+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='cm' AIRFLOW_CTX_DAG_ID='prediction_dag_v1' AIRFLOW_CTX_TASK_ID='predict_model' AIRFLOW_CTX_EXECUTION_DATE='2025-01-01T17:42:18.501650+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-01T17:42:18.501650+00:00'
+[2025-01-01T17:42:25.791+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-01T17:42:25.792+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-01T17:42:25.794+0000] {logging_mixin.py:190} INFO - Current task name:predict_model state:running start_date:2025-01-01 17:42:25.128115+00:00
+[2025-01-01T17:42:25.795+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 and current dag run status:running
+[2025-01-01T17:42:25.796+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-01T17:42:25.801+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvsnzuxp3o --python=python
+[2025-01-01T17:42:25.807+0000] {process_utils.py:190} INFO - Output:
+[2025-01-01T17:42:26.628+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.7.final.0-64 in 182ms
+[2025-01-01T17:42:26.630+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venvsnzuxp3o, clear=False, no_vcs_ignore=False, global=False)
+[2025-01-01T17:42:26.631+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2025-01-01T17:42:26.633+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2025-01-01T17:42:26.634+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2025-01-01T17:42:26.654+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvsnzuxp3o/bin/pip install -r /tmp/venvsnzuxp3o/requirements.txt
+[2025-01-01T17:42:26.659+0000] {process_utils.py:190} INFO - Output:
+[2025-01-01T17:42:28.413+0000] {process_utils.py:194} INFO - Collecting apache-*** (from -r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:28.545+0000] {process_utils.py:194} INFO -   Downloading apache_***-2.10.4-py3-none-any.whl.metadata (43 kB)
+[2025-01-01T17:42:29.311+0000] {process_utils.py:194} INFO - Collecting feature-engine==1.8.2 (from -r /tmp/venvsnzuxp3o/requirements.txt (line 2))
+[2025-01-01T17:42:29.314+0000] {process_utils.py:194} INFO -   Using cached feature_engine-1.8.2-py2.py3-none-any.whl.metadata (9.9 kB)
+[2025-01-01T17:42:29.361+0000] {process_utils.py:194} INFO - Collecting joblib==1.3.2 (from -r /tmp/venvsnzuxp3o/requirements.txt (line 3))
+[2025-01-01T17:42:29.364+0000] {process_utils.py:194} INFO -   Using cached joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+[2025-01-01T17:42:29.593+0000] {process_utils.py:194} INFO - Collecting numpy==1.26.4 (from -r /tmp/venvsnzuxp3o/requirements.txt (line 4))
+[2025-01-01T17:42:29.599+0000] {process_utils.py:194} INFO -   Using cached numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+[2025-01-01T17:42:29.867+0000] {process_utils.py:194} INFO - Collecting pandas==2.2.3 (from -r /tmp/venvsnzuxp3o/requirements.txt (line 5))
+[2025-01-01T17:42:29.869+0000] {process_utils.py:194} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2025-01-01T17:42:30.142+0000] {process_utils.py:194} INFO - Collecting pendulum (from -r /tmp/venvsnzuxp3o/requirements.txt (line 6))
+[2025-01-01T17:42:30.149+0000] {process_utils.py:194} INFO -   Using cached pendulum-3.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.9 kB)
+[2025-01-01T17:42:30.372+0000] {process_utils.py:194} INFO - Collecting scikit-learn==1.5.2 (from -r /tmp/venvsnzuxp3o/requirements.txt (line 7))
+[2025-01-01T17:42:30.375+0000] {process_utils.py:194} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2025-01-01T17:42:30.625+0000] {process_utils.py:194} INFO - Collecting scipy>=1.4.1 (from feature-engine==1.8.2->-r /tmp/venvsnzuxp3o/requirements.txt (line 2))
+[2025-01-01T17:42:30.627+0000] {process_utils.py:194} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2025-01-01T17:42:30.910+0000] {process_utils.py:194} INFO - Collecting statsmodels>=0.11.1 (from feature-engine==1.8.2->-r /tmp/venvsnzuxp3o/requirements.txt (line 2))
+[2025-01-01T17:42:30.911+0000] {process_utils.py:194} INFO -   Using cached statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
+[2025-01-01T17:42:31.058+0000] {process_utils.py:194} INFO - Collecting python-dateutil>=2.8.2 (from pandas==2.2.3->-r /tmp/venvsnzuxp3o/requirements.txt (line 5))
+[2025-01-01T17:42:31.063+0000] {process_utils.py:194} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2025-01-01T17:42:31.242+0000] {process_utils.py:194} INFO - Collecting pytz>=2020.1 (from pandas==2.2.3->-r /tmp/venvsnzuxp3o/requirements.txt (line 5))
+[2025-01-01T17:42:31.244+0000] {process_utils.py:194} INFO -   Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2025-01-01T17:42:31.347+0000] {process_utils.py:194} INFO - Collecting tzdata>=2022.7 (from pandas==2.2.3->-r /tmp/venvsnzuxp3o/requirements.txt (line 5))
+[2025-01-01T17:42:31.350+0000] {process_utils.py:194} INFO -   Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2025-01-01T17:42:31.431+0000] {process_utils.py:194} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn==1.5.2->-r /tmp/venvsnzuxp3o/requirements.txt (line 7))
+[2025-01-01T17:42:31.432+0000] {process_utils.py:194} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2025-01-01T17:42:31.751+0000] {process_utils.py:194} INFO - Collecting alembic<2.0,>=1.13.1 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:31.773+0000] {process_utils.py:194} INFO -   Downloading alembic-1.14.0-py3-none-any.whl.metadata (7.4 kB)
+[2025-01-01T17:42:32.093+0000] {process_utils.py:194} INFO - Collecting argcomplete>=1.10 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:32.165+0000] {process_utils.py:194} INFO -   Downloading argcomplete-3.5.3-py3-none-any.whl.metadata (16 kB)
+[2025-01-01T17:42:32.493+0000] {process_utils.py:194} INFO - Collecting asgiref>=2.3.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:32.502+0000] {process_utils.py:194} INFO -   Downloading asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+[2025-01-01T17:42:32.843+0000] {process_utils.py:194} INFO - Collecting attrs>=22.1.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:32.862+0000] {process_utils.py:194} INFO -   Downloading attrs-24.3.0-py3-none-any.whl.metadata (11 kB)
+[2025-01-01T17:42:32.946+0000] {process_utils.py:194} INFO - Collecting blinker>=1.6.2 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:32.957+0000] {process_utils.py:194} INFO -   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+[2025-01-01T17:42:33.115+0000] {process_utils.py:194} INFO - Collecting colorlog>=6.8.2 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:33.126+0000] {process_utils.py:194} INFO -   Downloading colorlog-6.9.0-py3-none-any.whl.metadata (10 kB)
+[2025-01-01T17:42:33.279+0000] {process_utils.py:194} INFO - Collecting configupdater>=3.1.1 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:33.292+0000] {process_utils.py:194} INFO -   Downloading ConfigUpdater-3.2-py2.py3-none-any.whl.metadata (10 kB)
+[2025-01-01T17:42:33.482+0000] {process_utils.py:194} INFO - Collecting connexion<3.0,>=2.14.2 (from connexion[flask]<3.0,>=2.14.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:33.492+0000] {process_utils.py:194} INFO -   Downloading connexion-2.14.2-py2.py3-none-any.whl.metadata (28 kB)
+[2025-01-01T17:42:33.655+0000] {process_utils.py:194} INFO - Collecting cron-descriptor>=1.2.24 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:33.667+0000] {process_utils.py:194} INFO -   Downloading cron_descriptor-1.4.5-py3-none-any.whl.metadata (5.7 kB)
+[2025-01-01T17:42:33.853+0000] {process_utils.py:194} INFO - Collecting croniter>=2.0.2 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:33.872+0000] {process_utils.py:194} INFO -   Downloading croniter-6.0.0-py2.py3-none-any.whl.metadata (32 kB)
+[2025-01-01T17:42:34.522+0000] {process_utils.py:194} INFO - Collecting cryptography>=41.0.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:34.552+0000] {process_utils.py:194} INFO -   Downloading cryptography-44.0.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (5.7 kB)
+[2025-01-01T17:42:34.611+0000] {process_utils.py:194} INFO - Collecting deprecated>=1.2.13 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:34.756+0000] {process_utils.py:194} INFO -   Downloading Deprecated-1.2.15-py2.py3-none-any.whl.metadata (5.5 kB)
+[2025-01-01T17:42:34.811+0000] {process_utils.py:194} INFO - Collecting dill>=0.2.2 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:34.877+0000] {process_utils.py:194} INFO -   Downloading dill-0.3.9-py3-none-any.whl.metadata (10 kB)
+[2025-01-01T17:42:35.040+0000] {process_utils.py:194} INFO - Collecting flask-caching>=2.0.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:35.092+0000] {process_utils.py:194} INFO -   Downloading Flask_Caching-2.3.0-py3-none-any.whl.metadata (2.2 kB)
+[2025-01-01T17:42:35.251+0000] {process_utils.py:194} INFO - Collecting flask-session<0.6,>=0.4.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:35.265+0000] {process_utils.py:194} INFO -   Downloading flask_session-0.5.0-py3-none-any.whl.metadata (1.4 kB)
+[2025-01-01T17:42:35.406+0000] {process_utils.py:194} INFO - Collecting flask-wtf>=1.1.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:35.436+0000] {process_utils.py:194} INFO -   Downloading flask_wtf-1.2.2-py3-none-any.whl.metadata (3.4 kB)
+[2025-01-01T17:42:35.534+0000] {process_utils.py:194} INFO - Collecting flask<2.3,>=2.2.1 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:35.552+0000] {process_utils.py:194} INFO -   Downloading Flask-2.2.5-py3-none-any.whl.metadata (3.9 kB)
+[2025-01-01T17:42:35.666+0000] {process_utils.py:194} INFO - Collecting fsspec>=2023.10.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:35.679+0000] {process_utils.py:194} INFO -   Downloading fsspec-2024.12.0-py3-none-any.whl.metadata (11 kB)
+[2025-01-01T17:42:35.991+0000] {process_utils.py:194} INFO - Collecting google-re2>=1.1 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:36.003+0000] {process_utils.py:194} INFO -   Downloading google_re2-1.1.20240702-1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.2 kB)
+[2025-01-01T17:42:36.057+0000] {process_utils.py:194} INFO - Collecting gunicorn>=20.1.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:36.068+0000] {process_utils.py:194} INFO -   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+[2025-01-01T17:42:36.157+0000] {process_utils.py:194} INFO - Collecting httpx>=0.25.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:36.175+0000] {process_utils.py:194} INFO -   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+[2025-01-01T17:42:36.230+0000] {process_utils.py:194} INFO - Collecting itsdangerous>=2.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:36.240+0000] {process_utils.py:194} INFO -   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+[2025-01-01T17:42:36.385+0000] {process_utils.py:194} INFO - Collecting jinja2>=3.0.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:36.396+0000] {process_utils.py:194} INFO -   Downloading jinja2-3.1.5-py3-none-any.whl.metadata (2.6 kB)
+[2025-01-01T17:42:36.567+0000] {process_utils.py:194} INFO - Collecting jsonschema>=4.18.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:36.579+0000] {process_utils.py:194} INFO -   Downloading jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+[2025-01-01T17:42:36.794+0000] {process_utils.py:194} INFO - Collecting lazy-object-proxy>=1.2.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:36.943+0000] {process_utils.py:194} INFO -   Downloading lazy_object_proxy-1.10.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.8 kB)
+[2025-01-01T17:42:37.582+0000] {process_utils.py:194} INFO - Collecting linkify-it-py>=2.0.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:37.628+0000] {process_utils.py:194} INFO -   Downloading linkify_it_py-2.0.3-py3-none-any.whl.metadata (8.5 kB)
+[2025-01-01T17:42:37.804+0000] {process_utils.py:194} INFO - Collecting lockfile>=0.12.2 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:37.853+0000] {process_utils.py:194} INFO -   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+[2025-01-01T17:42:37.948+0000] {process_utils.py:194} INFO - Collecting markdown-it-py>=2.1.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:37.996+0000] {process_utils.py:194} INFO -   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+[2025-01-01T17:42:38.144+0000] {process_utils.py:194} INFO - Collecting markupsafe>=1.1.1 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:38.167+0000] {process_utils.py:194} INFO -   Downloading MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+[2025-01-01T17:42:38.311+0000] {process_utils.py:194} INFO - Collecting marshmallow-oneofschema>=2.0.1 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:38.327+0000] {process_utils.py:194} INFO -   Downloading marshmallow_oneofschema-3.1.1-py3-none-any.whl.metadata (5.0 kB)
+[2025-01-01T17:42:38.490+0000] {process_utils.py:194} INFO - Collecting mdit-py-plugins>=0.3.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:38.547+0000] {process_utils.py:194} INFO -   Downloading mdit_py_plugins-0.4.2-py3-none-any.whl.metadata (2.8 kB)
+[2025-01-01T17:42:38.691+0000] {process_utils.py:194} INFO - Collecting methodtools>=0.4.7 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:38.706+0000] {process_utils.py:194} INFO -   Downloading methodtools-0.4.7-py2.py3-none-any.whl.metadata (3.0 kB)
+[2025-01-01T17:42:38.882+0000] {process_utils.py:194} INFO - Collecting opentelemetry-api>=1.24.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:38.892+0000] {process_utils.py:194} INFO -   Downloading opentelemetry_api-1.29.0-py3-none-any.whl.metadata (1.4 kB)
+[2025-01-01T17:42:39.035+0000] {process_utils.py:194} INFO - Collecting opentelemetry-exporter-otlp>=1.24.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:39.047+0000] {process_utils.py:194} INFO -   Downloading opentelemetry_exporter_otlp-1.29.0-py3-none-any.whl.metadata (2.3 kB)
+[2025-01-01T17:42:39.112+0000] {process_utils.py:194} INFO - Collecting packaging>=23.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:39.114+0000] {process_utils.py:194} INFO -   Using cached packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+[2025-01-01T17:42:39.140+0000] {process_utils.py:194} INFO - Collecting pathspec>=0.9.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:39.153+0000] {process_utils.py:194} INFO -   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+[2025-01-01T17:42:39.309+0000] {process_utils.py:194} INFO - Collecting pluggy>=1.5.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:39.318+0000] {process_utils.py:194} INFO -   Downloading pluggy-1.5.0-py3-none-any.whl.metadata (4.8 kB)
+[2025-01-01T17:42:39.466+0000] {process_utils.py:194} INFO - Collecting psutil>=5.8.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:39.475+0000] {process_utils.py:194} INFO -   Downloading psutil-6.1.1-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+[2025-01-01T17:42:39.537+0000] {process_utils.py:194} INFO - Collecting pygments>=2.0.1 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:39.553+0000] {process_utils.py:194} INFO -   Downloading pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+[2025-01-01T17:42:39.700+0000] {process_utils.py:194} INFO - Collecting pyjwt>=2.0.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:39.710+0000] {process_utils.py:194} INFO -   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+[2025-01-01T17:42:39.848+0000] {process_utils.py:194} INFO - Collecting python-daemon>=3.0.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:39.871+0000] {process_utils.py:194} INFO -   Downloading python_daemon-3.1.2-py3-none-any.whl.metadata (4.8 kB)
+[2025-01-01T17:42:40.067+0000] {process_utils.py:194} INFO - Collecting python-nvd3>=0.15.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:40.087+0000] {process_utils.py:194} INFO -   Downloading python-nvd3-0.16.0.tar.gz (34 kB)
+[2025-01-01T17:42:40.160+0000] {process_utils.py:194} INFO -   Installing build dependencies: started
+[2025-01-01T17:42:42.950+0000] {process_utils.py:194} INFO -   Installing build dependencies: finished with status 'done'
+[2025-01-01T17:42:42.952+0000] {process_utils.py:194} INFO -   Getting requirements to build wheel: started
+[2025-01-01T17:42:43.631+0000] {process_utils.py:194} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2025-01-01T17:42:43.632+0000] {process_utils.py:194} INFO -   Preparing metadata (pyproject.toml): started
+[2025-01-01T17:42:44.235+0000] {process_utils.py:194} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2025-01-01T17:42:44.363+0000] {process_utils.py:194} INFO - Collecting python-slugify>=5.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:44.375+0000] {process_utils.py:194} INFO -   Downloading python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+[2025-01-01T17:42:44.443+0000] {process_utils.py:194} INFO - Collecting requests<3,>=2.27.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:44.452+0000] {process_utils.py:194} INFO -   Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+[2025-01-01T17:42:44.599+0000] {process_utils.py:194} INFO - Collecting requests-toolbelt>=0.4.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:44.608+0000] {process_utils.py:194} INFO -   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+[2025-01-01T17:42:44.650+0000] {process_utils.py:194} INFO - Collecting rfc3339-validator>=0.1.4 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:44.661+0000] {process_utils.py:194} INFO -   Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+[2025-01-01T17:42:44.803+0000] {process_utils.py:194} INFO - Collecting rich-argparse>=1.0.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:44.820+0000] {process_utils.py:194} INFO -   Downloading rich_argparse-1.6.0-py3-none-any.whl.metadata (14 kB)
+[2025-01-01T17:42:44.951+0000] {process_utils.py:194} INFO - Collecting rich>=12.4.4 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:44.960+0000] {process_utils.py:194} INFO -   Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+[2025-01-01T17:42:45.053+0000] {process_utils.py:194} INFO - Collecting setproctitle>=1.3.3 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:45.154+0000] {process_utils.py:194} INFO -   Downloading setproctitle-1.3.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+[2025-01-01T17:42:45.719+0000] {process_utils.py:194} INFO - Collecting sqlalchemy<2.0,>=1.4.36 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:45.745+0000] {process_utils.py:194} INFO -   Downloading SQLAlchemy-1.4.54-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+[2025-01-01T17:42:45.901+0000] {process_utils.py:194} INFO - Collecting sqlalchemy-jsonfield>=1.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:45.912+0000] {process_utils.py:194} INFO -   Downloading SQLAlchemy_JSONField-1.0.2-py3-none-any.whl.metadata (5.2 kB)
+[2025-01-01T17:42:45.966+0000] {process_utils.py:194} INFO - Collecting tabulate>=0.7.5 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:45.980+0000] {process_utils.py:194} INFO -   Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+[2025-01-01T17:42:46.135+0000] {process_utils.py:194} INFO - Collecting tenacity!=8.2.0,>=8.0.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:46.149+0000] {process_utils.py:194} INFO -   Downloading tenacity-9.0.0-py3-none-any.whl.metadata (1.2 kB)
+[2025-01-01T17:42:46.285+0000] {process_utils.py:194} INFO - Collecting termcolor>=1.1.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:46.294+0000] {process_utils.py:194} INFO -   Downloading termcolor-2.5.0-py3-none-any.whl.metadata (6.1 kB)
+[2025-01-01T17:42:46.452+0000] {process_utils.py:194} INFO - Collecting universal-pathlib!=0.2.4,>=0.2.2 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:46.468+0000] {process_utils.py:194} INFO -   Downloading universal_pathlib-0.2.6-py3-none-any.whl.metadata (25 kB)
+[2025-01-01T17:42:46.553+0000] {process_utils.py:194} INFO - Collecting werkzeug<3,>=2.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:46.562+0000] {process_utils.py:194} INFO -   Downloading werkzeug-2.3.8-py3-none-any.whl.metadata (4.1 kB)
+[2025-01-01T17:42:46.692+0000] {process_utils.py:194} INFO - Collecting apache-***-providers-common-compat (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:46.703+0000] {process_utils.py:194} INFO -   Downloading apache_***_providers_common_compat-1.3.0-py3-none-any.whl.metadata (6.1 kB)
+[2025-01-01T17:42:46.853+0000] {process_utils.py:194} INFO - Collecting apache-***-providers-common-io (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:46.877+0000] {process_utils.py:194} INFO -   Downloading apache_***_providers_common_io-1.5.0-py3-none-any.whl.metadata (6.1 kB)
+[2025-01-01T17:42:47.069+0000] {process_utils.py:194} INFO - Collecting apache-***-providers-common-sql (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:47.097+0000] {process_utils.py:194} INFO -   Downloading apache_***_providers_common_sql-1.21.0-py3-none-any.whl.metadata (6.2 kB)
+[2025-01-01T17:42:47.265+0000] {process_utils.py:194} INFO - Collecting apache-***-providers-fab>=1.0.2 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:47.282+0000] {process_utils.py:194} INFO -   Downloading apache_***_providers_fab-1.5.1-py3-none-any.whl.metadata (6.6 kB)
+[2025-01-01T17:42:47.459+0000] {process_utils.py:194} INFO - Collecting apache-***-providers-ftp (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:47.469+0000] {process_utils.py:194} INFO -   Downloading apache_***_providers_ftp-3.12.0-py3-none-any.whl.metadata (6.0 kB)
+[2025-01-01T17:42:47.673+0000] {process_utils.py:194} INFO - Collecting apache-***-providers-http (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:47.687+0000] {process_utils.py:194} INFO -   Downloading apache_***_providers_http-5.0.0-py3-none-any.whl.metadata (4.9 kB)
+[2025-01-01T17:42:47.874+0000] {process_utils.py:194} INFO - Collecting apache-***-providers-imap (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:47.887+0000] {process_utils.py:194} INFO -   Downloading apache_***_providers_imap-3.8.0-py3-none-any.whl.metadata (4.6 kB)
+[2025-01-01T17:42:48.058+0000] {process_utils.py:194} INFO - Collecting apache-***-providers-smtp (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:48.071+0000] {process_utils.py:194} INFO -   Downloading apache_***_providers_smtp-1.9.0-py3-none-any.whl.metadata (4.6 kB)
+[2025-01-01T17:42:48.281+0000] {process_utils.py:194} INFO - Collecting apache-***-providers-sqlite (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:48.296+0000] {process_utils.py:194} INFO -   Downloading apache_***_providers_sqlite-4.0.0-py3-none-any.whl.metadata (5.9 kB)
+[2025-01-01T17:42:48.539+0000] {process_utils.py:194} INFO - Collecting time-machine>=2.6.0 (from pendulum->-r /tmp/venvsnzuxp3o/requirements.txt (line 6))
+[2025-01-01T17:42:48.541+0000] {process_utils.py:194} INFO -   Using cached time_machine-2.16.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+[2025-01-01T17:42:48.695+0000] {process_utils.py:194} INFO - Collecting Mako (from alembic<2.0,>=1.13.1->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:48.706+0000] {process_utils.py:194} INFO -   Downloading Mako-1.3.8-py3-none-any.whl.metadata (2.9 kB)
+[2025-01-01T17:42:48.772+0000] {process_utils.py:194} INFO - Collecting typing-extensions>=4 (from alembic<2.0,>=1.13.1->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:48.785+0000] {process_utils.py:194} INFO -   Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+[2025-01-01T17:42:49.096+0000] {process_utils.py:194} INFO - Collecting flask-appbuilder==4.5.2 (from apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:49.110+0000] {process_utils.py:194} INFO -   Downloading Flask_AppBuilder-4.5.2-py3-none-any.whl.metadata (8.9 kB)
+[2025-01-01T17:42:49.251+0000] {process_utils.py:194} INFO - Collecting flask-login>=0.6.2 (from apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:49.262+0000] {process_utils.py:194} INFO -   Downloading Flask_Login-0.6.3-py3-none-any.whl.metadata (5.8 kB)
+[2025-01-01T17:42:49.331+0000] {process_utils.py:194} INFO - Collecting jmespath>=0.7.0 (from apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:49.341+0000] {process_utils.py:194} INFO -   Downloading jmespath-1.0.1-py3-none-any.whl.metadata (7.6 kB)
+[2025-01-01T17:42:49.526+0000] {process_utils.py:194} INFO - Collecting apispec<7,>=6.0.0 (from apispec[yaml]<7,>=6.0.0->flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:49.537+0000] {process_utils.py:194} INFO -   Downloading apispec-6.8.0-py3-none-any.whl.metadata (10 kB)
+[2025-01-01T17:42:49.588+0000] {process_utils.py:194} INFO - Collecting colorama<1,>=0.3.9 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:49.612+0000] {process_utils.py:194} INFO -   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+[2025-01-01T17:42:49.671+0000] {process_utils.py:194} INFO - Collecting click<9,>=8 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:49.680+0000] {process_utils.py:194} INFO -   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+[2025-01-01T17:42:49.824+0000] {process_utils.py:194} INFO - Collecting email-validator>=1.0.5 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:49.837+0000] {process_utils.py:194} INFO -   Downloading email_validator-2.2.0-py3-none-any.whl.metadata (25 kB)
+[2025-01-01T17:42:49.991+0000] {process_utils.py:194} INFO - Collecting Flask-Babel<3,>=1 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:50.008+0000] {process_utils.py:194} INFO -   Downloading Flask_Babel-2.0.0-py3-none-any.whl.metadata (2.1 kB)
+[2025-01-01T17:42:50.184+0000] {process_utils.py:194} INFO - Collecting Flask-Limiter<4,>3 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:50.194+0000] {process_utils.py:194} INFO -   Downloading Flask_Limiter-3.9.2-py3-none-any.whl.metadata (6.1 kB)
+[2025-01-01T17:42:50.345+0000] {process_utils.py:194} INFO - Collecting Flask-SQLAlchemy<3,>=2.4 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:50.356+0000] {process_utils.py:194} INFO -   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl.metadata (3.1 kB)
+[2025-01-01T17:42:50.503+0000] {process_utils.py:194} INFO - Collecting Flask-JWT-Extended<5.0.0,>=4.0.0 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:50.512+0000] {process_utils.py:194} INFO -   Downloading Flask_JWT_Extended-4.7.1-py2.py3-none-any.whl.metadata (3.8 kB)
+[2025-01-01T17:42:50.731+0000] {process_utils.py:194} INFO - Collecting marshmallow<4,>=3.18.0 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:50.750+0000] {process_utils.py:194} INFO -   Downloading marshmallow-3.23.2-py3-none-any.whl.metadata (7.1 kB)
+[2025-01-01T17:42:50.919+0000] {process_utils.py:194} INFO - Collecting marshmallow-sqlalchemy<0.29.0,>=0.22.0 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:50.934+0000] {process_utils.py:194} INFO -   Downloading marshmallow_sqlalchemy-0.28.2-py2.py3-none-any.whl.metadata (6.8 kB)
+[2025-01-01T17:42:51.079+0000] {process_utils.py:194} INFO - Collecting prison<1.0.0,>=0.2.1 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:51.095+0000] {process_utils.py:194} INFO -   Downloading prison-0.2.1-py2.py3-none-any.whl.metadata (973 bytes)
+[2025-01-01T17:42:51.375+0000] {process_utils.py:194} INFO - Collecting sqlalchemy-utils<1,>=0.32.21 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:51.395+0000] {process_utils.py:194} INFO -   Downloading SQLAlchemy_Utils-0.41.2-py3-none-any.whl.metadata (4.2 kB)
+[2025-01-01T17:42:51.598+0000] {process_utils.py:194} INFO - Collecting WTForms<4 (from flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:51.610+0000] {process_utils.py:194} INFO -   Downloading wtforms-3.2.1-py3-none-any.whl.metadata (5.3 kB)
+[2025-01-01T17:42:51.755+0000] {process_utils.py:194} INFO - Collecting clickclick<21,>=1.2 (from connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:51.767+0000] {process_utils.py:194} INFO -   Downloading clickclick-20.10.2-py2.py3-none-any.whl.metadata (7.6 kB)
+[2025-01-01T17:42:51.989+0000] {process_utils.py:194} INFO - Collecting PyYAML<7,>=5.1 (from connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:51.999+0000] {process_utils.py:194} INFO -   Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+[2025-01-01T17:42:52.125+0000] {process_utils.py:194} INFO - Collecting inflection<0.6,>=0.3.1 (from connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:52.134+0000] {process_utils.py:194} INFO -   Downloading inflection-0.5.1-py2.py3-none-any.whl.metadata (1.7 kB)
+[2025-01-01T17:42:52.153+0000] {process_utils.py:194} INFO - Collecting werkzeug<3,>=2.0 (from apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:52.166+0000] {process_utils.py:194} INFO -   Downloading Werkzeug-2.2.3-py3-none-any.whl.metadata (4.4 kB)
+[2025-01-01T17:42:52.583+0000] {process_utils.py:194} INFO - Collecting cffi>=1.12 (from cryptography>=41.0.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:52.593+0000] {process_utils.py:194} INFO -   Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+[2025-01-01T17:42:52.843+0000] {process_utils.py:194} INFO - Collecting wrapt<2,>=1.10 (from deprecated>=1.2.13->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:52.853+0000] {process_utils.py:194} INFO -   Downloading wrapt-1.17.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+[2025-01-01T17:42:53.022+0000] {process_utils.py:194} INFO - Collecting cachelib<0.10.0,>=0.9.0 (from flask-caching>=2.0.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:53.034+0000] {process_utils.py:194} INFO -   Downloading cachelib-0.9.0-py3-none-any.whl.metadata (1.9 kB)
+[2025-01-01T17:42:53.116+0000] {process_utils.py:194} INFO - Collecting anyio (from httpx>=0.25.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:53.124+0000] {process_utils.py:194} INFO -   Downloading anyio-4.7.0-py3-none-any.whl.metadata (4.7 kB)
+[2025-01-01T17:42:53.176+0000] {process_utils.py:194} INFO - Collecting certifi (from httpx>=0.25.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:53.191+0000] {process_utils.py:194} INFO -   Downloading certifi-2024.12.14-py3-none-any.whl.metadata (2.3 kB)
+[2025-01-01T17:42:53.247+0000] {process_utils.py:194} INFO - Collecting httpcore==1.* (from httpx>=0.25.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:53.255+0000] {process_utils.py:194} INFO -   Downloading httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+[2025-01-01T17:42:53.303+0000] {process_utils.py:194} INFO - Collecting idna (from httpx>=0.25.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:53.316+0000] {process_utils.py:194} INFO -   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+[2025-01-01T17:42:53.364+0000] {process_utils.py:194} INFO - Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx>=0.25.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:53.379+0000] {process_utils.py:194} INFO -   Downloading h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+[2025-01-01T17:42:53.463+0000] {process_utils.py:194} INFO - Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.18.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:53.478+0000] {process_utils.py:194} INFO -   Downloading jsonschema_specifications-2024.10.1-py3-none-any.whl.metadata (3.0 kB)
+[2025-01-01T17:42:53.561+0000] {process_utils.py:194} INFO - Collecting referencing>=0.28.4 (from jsonschema>=4.18.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:53.571+0000] {process_utils.py:194} INFO -   Downloading referencing-0.35.1-py3-none-any.whl.metadata (2.8 kB)
+[2025-01-01T17:42:54.057+0000] {process_utils.py:194} INFO - Collecting rpds-py>=0.7.1 (from jsonschema>=4.18.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:54.076+0000] {process_utils.py:194} INFO -   Downloading rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+[2025-01-01T17:42:54.219+0000] {process_utils.py:194} INFO - Collecting uc-micro-py (from linkify-it-py>=2.0.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:54.232+0000] {process_utils.py:194} INFO -   Downloading uc_micro_py-1.0.3-py3-none-any.whl.metadata (2.0 kB)
+[2025-01-01T17:42:54.278+0000] {process_utils.py:194} INFO - Collecting mdurl~=0.1 (from markdown-it-py>=2.1.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:54.287+0000] {process_utils.py:194} INFO -   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+[2025-01-01T17:42:54.446+0000] {process_utils.py:194} INFO - Collecting wirerope>=0.4.7 (from methodtools>=0.4.7->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:54.457+0000] {process_utils.py:194} INFO -   Downloading wirerope-0.4.8-py2.py3-none-any.whl.metadata (3.2 kB)
+[2025-01-01T17:42:54.584+0000] {process_utils.py:194} INFO - Collecting importlib-metadata<=8.5.0,>=6.0 (from opentelemetry-api>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:54.592+0000] {process_utils.py:194} INFO -   Downloading importlib_metadata-8.5.0-py3-none-any.whl.metadata (4.8 kB)
+[2025-01-01T17:42:54.761+0000] {process_utils.py:194} INFO - Collecting opentelemetry-exporter-otlp-proto-grpc==1.29.0 (from opentelemetry-exporter-otlp>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:54.772+0000] {process_utils.py:194} INFO -   Downloading opentelemetry_exporter_otlp_proto_grpc-1.29.0-py3-none-any.whl.metadata (2.2 kB)
+[2025-01-01T17:42:54.934+0000] {process_utils.py:194} INFO - Collecting opentelemetry-exporter-otlp-proto-http==1.29.0 (from opentelemetry-exporter-otlp>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:54.948+0000] {process_utils.py:194} INFO -   Downloading opentelemetry_exporter_otlp_proto_http-1.29.0-py3-none-any.whl.metadata (2.2 kB)
+[2025-01-01T17:42:55.026+0000] {process_utils.py:194} INFO - Collecting googleapis-common-protos~=1.52 (from opentelemetry-exporter-otlp-proto-grpc==1.29.0->opentelemetry-exporter-otlp>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:55.037+0000] {process_utils.py:194} INFO -   Downloading googleapis_common_protos-1.66.0-py2.py3-none-any.whl.metadata (1.5 kB)
+[2025-01-01T17:42:55.928+0000] {process_utils.py:194} INFO - Collecting grpcio<2.0.0,>=1.63.2 (from opentelemetry-exporter-otlp-proto-grpc==1.29.0->opentelemetry-exporter-otlp>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:56.009+0000] {process_utils.py:194} INFO -   Downloading grpcio-1.68.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.9 kB)
+[2025-01-01T17:42:56.159+0000] {process_utils.py:194} INFO - Collecting opentelemetry-exporter-otlp-proto-common==1.29.0 (from opentelemetry-exporter-otlp-proto-grpc==1.29.0->opentelemetry-exporter-otlp>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:56.174+0000] {process_utils.py:194} INFO -   Downloading opentelemetry_exporter_otlp_proto_common-1.29.0-py3-none-any.whl.metadata (1.8 kB)
+[2025-01-01T17:42:56.329+0000] {process_utils.py:194} INFO - Collecting opentelemetry-proto==1.29.0 (from opentelemetry-exporter-otlp-proto-grpc==1.29.0->opentelemetry-exporter-otlp>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:56.339+0000] {process_utils.py:194} INFO -   Downloading opentelemetry_proto-1.29.0-py3-none-any.whl.metadata (2.3 kB)
+[2025-01-01T17:42:56.481+0000] {process_utils.py:194} INFO - Collecting opentelemetry-sdk~=1.29.0 (from opentelemetry-exporter-otlp-proto-grpc==1.29.0->opentelemetry-exporter-otlp>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:56.493+0000] {process_utils.py:194} INFO -   Downloading opentelemetry_sdk-1.29.0-py3-none-any.whl.metadata (1.5 kB)
+[2025-01-01T17:42:56.818+0000] {process_utils.py:194} INFO - Collecting protobuf<6.0,>=5.0 (from opentelemetry-proto==1.29.0->opentelemetry-exporter-otlp-proto-grpc==1.29.0->opentelemetry-exporter-otlp>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:56.857+0000] {process_utils.py:194} INFO -   Downloading protobuf-5.29.2-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+[2025-01-01T17:42:56.944+0000] {process_utils.py:194} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.2.3->-r /tmp/venvsnzuxp3o/requirements.txt (line 5))
+[2025-01-01T17:42:56.947+0000] {process_utils.py:194} INFO -   Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+[2025-01-01T17:42:57.089+0000] {process_utils.py:194} INFO - Collecting text-unidecode>=1.3 (from python-slugify>=5.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:57.108+0000] {process_utils.py:194} INFO -   Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+[2025-01-01T17:42:57.254+0000] {process_utils.py:194} INFO - Collecting charset-normalizer<4,>=2 (from requests<3,>=2.27.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:57.267+0000] {process_utils.py:194} INFO -   Downloading charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+[2025-01-01T17:42:57.368+0000] {process_utils.py:194} INFO - Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.27.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:57.382+0000] {process_utils.py:194} INFO -   Downloading urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+[2025-01-01T17:42:57.685+0000] {process_utils.py:194} INFO - Collecting greenlet!=0.4.17 (from sqlalchemy<2.0,>=1.4.36->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:57.693+0000] {process_utils.py:194} INFO -   Downloading greenlet-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+[2025-01-01T17:42:57.995+0000] {process_utils.py:194} INFO - Collecting patsy>=0.5.6 (from statsmodels>=0.11.1->feature-engine==1.8.2->-r /tmp/venvsnzuxp3o/requirements.txt (line 2))
+[2025-01-01T17:42:57.997+0000] {process_utils.py:194} INFO -   Using cached patsy-1.0.1-py2.py3-none-any.whl.metadata (3.3 kB)
+[2025-01-01T17:42:58.205+0000] {process_utils.py:194} INFO - Collecting more-itertools>=9.0.0 (from apache-***-providers-common-sql->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:58.219+0000] {process_utils.py:194} INFO -   Downloading more_itertools-10.5.0-py3-none-any.whl.metadata (36 kB)
+[2025-01-01T17:42:58.359+0000] {process_utils.py:194} INFO - Collecting sqlparse>=0.5.1 (from apache-***-providers-common-sql->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:58.368+0000] {process_utils.py:194} INFO -   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+[2025-01-01T17:42:59.179+0000] {process_utils.py:194} INFO - Collecting aiohttp!=3.11.0,>=3.9.2 (from apache-***-providers-http->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:59.189+0000] {process_utils.py:194} INFO -   Downloading aiohttp-3.11.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+[2025-01-01T17:42:59.345+0000] {process_utils.py:194} INFO - Collecting aiosqlite>=0.20.0 (from apache-***-providers-sqlite->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:59.359+0000] {process_utils.py:194} INFO -   Downloading aiosqlite-0.20.0-py3-none-any.whl.metadata (4.3 kB)
+[2025-01-01T17:42:59.411+0000] {process_utils.py:194} INFO - Collecting aiohappyeyeballs>=2.3.0 (from aiohttp!=3.11.0,>=3.9.2->apache-***-providers-http->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:59.428+0000] {process_utils.py:194} INFO -   Downloading aiohappyeyeballs-2.4.4-py3-none-any.whl.metadata (6.1 kB)
+[2025-01-01T17:42:59.461+0000] {process_utils.py:194} INFO - Collecting aiosignal>=1.1.2 (from aiohttp!=3.11.0,>=3.9.2->apache-***-providers-http->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:59.496+0000] {process_utils.py:194} INFO -   Downloading aiosignal-1.3.2-py2.py3-none-any.whl.metadata (3.8 kB)
+[2025-01-01T17:42:59.607+0000] {process_utils.py:194} INFO - Collecting frozenlist>=1.1.1 (from aiohttp!=3.11.0,>=3.9.2->apache-***-providers-http->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:42:59.655+0000] {process_utils.py:194} INFO -   Downloading frozenlist-1.5.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2025-01-01T17:43:00.225+0000] {process_utils.py:194} INFO - Collecting multidict<7.0,>=4.5 (from aiohttp!=3.11.0,>=3.9.2->apache-***-providers-http->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:00.239+0000] {process_utils.py:194} INFO -   Downloading multidict-6.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+[2025-01-01T17:43:00.300+0000] {process_utils.py:194} INFO - Collecting propcache>=0.2.0 (from aiohttp!=3.11.0,>=3.9.2->apache-***-providers-http->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:00.311+0000] {process_utils.py:194} INFO -   Downloading propcache-0.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
+[2025-01-01T17:43:00.766+0000] {process_utils.py:194} INFO - Collecting yarl<2.0,>=1.17.0 (from aiohttp!=3.11.0,>=3.9.2->apache-***-providers-http->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:00.782+0000] {process_utils.py:194} INFO -   Downloading yarl-1.18.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (69 kB)
+[2025-01-01T17:43:00.877+0000] {process_utils.py:194} INFO - Collecting pycparser (from cffi>=1.12->cryptography>=41.0.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:00.902+0000] {process_utils.py:194} INFO -   Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+[2025-01-01T17:43:01.204+0000] {process_utils.py:194} INFO - Collecting zipp>=3.20 (from importlib-metadata<=8.5.0,>=6.0->opentelemetry-api>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:01.245+0000] {process_utils.py:194} INFO -   Downloading zipp-3.21.0-py3-none-any.whl.metadata (3.7 kB)
+[2025-01-01T17:43:01.462+0000] {process_utils.py:194} INFO - Collecting sniffio>=1.1 (from anyio->httpx>=0.25.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:01.520+0000] {process_utils.py:194} INFO -   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+[2025-01-01T17:43:01.616+0000] {process_utils.py:194} INFO - Collecting dnspython>=2.0.0 (from email-validator>=1.0.5->flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:01.625+0000] {process_utils.py:194} INFO -   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+[2025-01-01T17:43:01.675+0000] {process_utils.py:194} INFO - Collecting Babel>=2.3 (from Flask-Babel<3,>=1->flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:01.690+0000] {process_utils.py:194} INFO -   Downloading babel-2.16.0-py3-none-any.whl.metadata (1.5 kB)
+[2025-01-01T17:43:01.873+0000] {process_utils.py:194} INFO - Collecting limits>=3.13 (from Flask-Limiter<4,>3->flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:01.925+0000] {process_utils.py:194} INFO -   Downloading limits-3.14.1-py3-none-any.whl.metadata (7.2 kB)
+[2025-01-01T17:43:02.055+0000] {process_utils.py:194} INFO - Collecting ordered-set<5,>4 (from Flask-Limiter<4,>3->flask-appbuilder==4.5.2->apache-***-providers-fab>=1.0.2->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:02.076+0000] {process_utils.py:194} INFO -   Downloading ordered_set-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+[2025-01-01T17:43:02.379+0000] {process_utils.py:194} INFO - Collecting opentelemetry-semantic-conventions==0.50b0 (from opentelemetry-sdk~=1.29.0->opentelemetry-exporter-otlp-proto-grpc==1.29.0->opentelemetry-exporter-otlp>=1.24.0->apache-***->-r /tmp/venvsnzuxp3o/requirements.txt (line 1))
+[2025-01-01T17:43:02.413+0000] {process_utils.py:194} INFO -   Downloading opentelemetry_semantic_conventions-0.50b0-py3-none-any.whl.metadata (2.3 kB)
+[2025-01-01T17:43:02.523+0000] {process_utils.py:194} INFO - Using cached feature_engine-1.8.2-py2.py3-none-any.whl (374 kB)
+[2025-01-01T17:43:02.526+0000] {process_utils.py:194} INFO - Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+[2025-01-01T17:43:02.527+0000] {process_utils.py:194} INFO - Using cached numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+[2025-01-01T17:43:02.545+0000] {process_utils.py:194} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2025-01-01T17:43:02.573+0000] {process_utils.py:194} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2025-01-01T17:43:02.806+0000] {process_utils.py:194} INFO - Downloading apache_***-2.10.4-py3-none-any.whl (13.4 MB)
+[2025-01-01T17:43:06.931+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.4/13.4 MB 3.3 MB/s eta 0:00:00
+[2025-01-01T17:43:06.933+0000] {process_utils.py:194} INFO - Using cached pendulum-3.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (384 kB)
+[2025-01-01T17:43:06.950+0000] {process_utils.py:194} INFO - Downloading alembic-1.14.0-py3-none-any.whl (233 kB)
+[2025-01-01T17:43:07.030+0000] {process_utils.py:194} INFO - Downloading apache_***_providers_fab-1.5.1-py3-none-any.whl (97 kB)
+[2025-01-01T17:43:07.070+0000] {process_utils.py:194} INFO - Downloading Flask_AppBuilder-4.5.2-py3-none-any.whl (2.2 MB)
+[2025-01-01T17:43:07.555+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 4.6 MB/s eta 0:00:00
+[2025-01-01T17:43:07.564+0000] {process_utils.py:194} INFO - Downloading apache_***_providers_common_compat-1.3.0-py3-none-any.whl (24 kB)
+[2025-01-01T17:43:07.587+0000] {process_utils.py:194} INFO - Downloading argcomplete-3.5.3-py3-none-any.whl (43 kB)
+[2025-01-01T17:43:07.614+0000] {process_utils.py:194} INFO - Downloading asgiref-3.8.1-py3-none-any.whl (23 kB)
+[2025-01-01T17:43:07.634+0000] {process_utils.py:194} INFO - Downloading attrs-24.3.0-py3-none-any.whl (63 kB)
+[2025-01-01T17:43:07.665+0000] {process_utils.py:194} INFO - Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+[2025-01-01T17:43:07.688+0000] {process_utils.py:194} INFO - Downloading colorlog-6.9.0-py3-none-any.whl (11 kB)
+[2025-01-01T17:43:07.717+0000] {process_utils.py:194} INFO - Downloading ConfigUpdater-3.2-py2.py3-none-any.whl (34 kB)
+[2025-01-01T17:43:07.740+0000] {process_utils.py:194} INFO - Downloading connexion-2.14.2-py2.py3-none-any.whl (95 kB)
+[2025-01-01T17:43:07.771+0000] {process_utils.py:194} INFO - Downloading cron_descriptor-1.4.5-py3-none-any.whl (50 kB)
+[2025-01-01T17:43:07.793+0000] {process_utils.py:194} INFO - Downloading croniter-6.0.0-py2.py3-none-any.whl (25 kB)
+[2025-01-01T17:43:07.814+0000] {process_utils.py:194} INFO - Downloading cryptography-44.0.0-cp39-abi3-manylinux_2_28_x86_64.whl (4.2 MB)
+[2025-01-01T17:43:10.980+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 1.3 MB/s eta 0:00:00
+[2025-01-01T17:43:10.988+0000] {process_utils.py:194} INFO - Downloading Deprecated-1.2.15-py2.py3-none-any.whl (9.9 kB)
+[2025-01-01T17:43:11.008+0000] {process_utils.py:194} INFO - Downloading dill-0.3.9-py3-none-any.whl (119 kB)
+[2025-01-01T17:43:11.056+0000] {process_utils.py:194} INFO - Downloading Flask-2.2.5-py3-none-any.whl (101 kB)
+[2025-01-01T17:43:11.111+0000] {process_utils.py:194} INFO - Downloading Flask_Caching-2.3.0-py3-none-any.whl (28 kB)
+[2025-01-01T17:43:11.141+0000] {process_utils.py:194} INFO - Downloading flask_session-0.5.0-py3-none-any.whl (7.2 kB)
+[2025-01-01T17:43:11.160+0000] {process_utils.py:194} INFO - Downloading flask_wtf-1.2.2-py3-none-any.whl (12 kB)
+[2025-01-01T17:43:11.179+0000] {process_utils.py:194} INFO - Downloading fsspec-2024.12.0-py3-none-any.whl (183 kB)
+[2025-01-01T17:43:11.241+0000] {process_utils.py:194} INFO - Downloading google_re2-1.1.20240702-1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (546 kB)
+[2025-01-01T17:43:11.345+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 546.8/546.8 kB 4.6 MB/s eta 0:00:00
+[2025-01-01T17:43:11.363+0000] {process_utils.py:194} INFO - Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+[2025-01-01T17:43:11.382+0000] {process_utils.py:194} INFO - Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+[2025-01-01T17:43:11.416+0000] {process_utils.py:194} INFO - Downloading httpcore-1.0.7-py3-none-any.whl (78 kB)
+[2025-01-01T17:43:11.446+0000] {process_utils.py:194} INFO - Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+[2025-01-01T17:43:11.465+0000] {process_utils.py:194} INFO - Downloading jinja2-3.1.5-py3-none-any.whl (134 kB)
+[2025-01-01T17:43:11.502+0000] {process_utils.py:194} INFO - Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+[2025-01-01T17:43:11.539+0000] {process_utils.py:194} INFO - Downloading lazy_object_proxy-1.10.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (72 kB)
+[2025-01-01T17:43:11.572+0000] {process_utils.py:194} INFO - Downloading linkify_it_py-2.0.3-py3-none-any.whl (19 kB)
+[2025-01-01T17:43:11.592+0000] {process_utils.py:194} INFO - Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+[2025-01-01T17:43:11.626+0000] {process_utils.py:194} INFO - Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+[2025-01-01T17:43:11.656+0000] {process_utils.py:194} INFO - Downloading MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23 kB)
+[2025-01-01T17:43:11.684+0000] {process_utils.py:194} INFO - Downloading marshmallow_oneofschema-3.1.1-py3-none-any.whl (5.7 kB)
+[2025-01-01T17:43:11.701+0000] {process_utils.py:194} INFO - Downloading mdit_py_plugins-0.4.2-py3-none-any.whl (55 kB)
+[2025-01-01T17:43:11.732+0000] {process_utils.py:194} INFO - Downloading methodtools-0.4.7-py2.py3-none-any.whl (4.0 kB)
+[2025-01-01T17:43:11.748+0000] {process_utils.py:194} INFO - Downloading opentelemetry_api-1.29.0-py3-none-any.whl (64 kB)
+[2025-01-01T17:43:11.774+0000] {process_utils.py:194} INFO - Downloading opentelemetry_exporter_otlp-1.29.0-py3-none-any.whl (7.0 kB)
+[2025-01-01T17:43:11.790+0000] {process_utils.py:194} INFO - Downloading opentelemetry_exporter_otlp_proto_grpc-1.29.0-py3-none-any.whl (18 kB)
+[2025-01-01T17:43:11.812+0000] {process_utils.py:194} INFO - Downloading opentelemetry_exporter_otlp_proto_http-1.29.0-py3-none-any.whl (17 kB)
+[2025-01-01T17:43:11.832+0000] {process_utils.py:194} INFO - Downloading opentelemetry_exporter_otlp_proto_common-1.29.0-py3-none-any.whl (18 kB)
+[2025-01-01T17:43:11.923+0000] {process_utils.py:194} INFO - Downloading opentelemetry_proto-1.29.0-py3-none-any.whl (55 kB)
+[2025-01-01T17:43:11.937+0000] {process_utils.py:194} INFO - Using cached packaging-24.2-py3-none-any.whl (65 kB)
+[2025-01-01T17:43:11.948+0000] {process_utils.py:194} INFO - Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+[2025-01-01T17:43:11.972+0000] {process_utils.py:194} INFO - Downloading pluggy-1.5.0-py3-none-any.whl (20 kB)
+[2025-01-01T17:43:12.006+0000] {process_utils.py:194} INFO - Downloading psutil-6.1.1-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (287 kB)
+[2025-01-01T17:43:12.130+0000] {process_utils.py:194} INFO - Downloading pygments-2.18.0-py3-none-any.whl (1.2 MB)
+[2025-01-01T17:43:12.524+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 3.2 MB/s eta 0:00:00
+[2025-01-01T17:43:12.545+0000] {process_utils.py:194} INFO - Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+[2025-01-01T17:43:12.562+0000] {process_utils.py:194} INFO - Downloading python_daemon-3.1.2-py3-none-any.whl (30 kB)
+[2025-01-01T17:43:12.574+0000] {process_utils.py:194} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2025-01-01T17:43:12.585+0000] {process_utils.py:194} INFO - Downloading python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+[2025-01-01T17:43:12.598+0000] {process_utils.py:194} INFO - Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2025-01-01T17:43:12.612+0000] {process_utils.py:194} INFO - Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+[2025-01-01T17:43:12.640+0000] {process_utils.py:194} INFO - Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+[2025-01-01T17:43:12.670+0000] {process_utils.py:194} INFO - Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+[2025-01-01T17:43:12.688+0000] {process_utils.py:194} INFO - Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+[2025-01-01T17:43:12.750+0000] {process_utils.py:194} INFO - Downloading rich_argparse-1.6.0-py3-none-any.whl (20 kB)
+[2025-01-01T17:43:12.766+0000] {process_utils.py:194} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2025-01-01T17:43:12.871+0000] {process_utils.py:194} INFO - Downloading setproctitle-1.3.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (31 kB)
+[2025-01-01T17:43:13.006+0000] {process_utils.py:194} INFO - Downloading SQLAlchemy-1.4.54-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+[2025-01-01T17:43:13.283+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 5.7 MB/s eta 0:00:00
+[2025-01-01T17:43:13.292+0000] {process_utils.py:194} INFO - Downloading SQLAlchemy_JSONField-1.0.2-py3-none-any.whl (10 kB)
+[2025-01-01T17:43:13.305+0000] {process_utils.py:194} INFO - Using cached statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.7 MB)
+[2025-01-01T17:43:13.342+0000] {process_utils.py:194} INFO - Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+[2025-01-01T17:43:13.363+0000] {process_utils.py:194} INFO - Downloading tenacity-9.0.0-py3-none-any.whl (28 kB)
+[2025-01-01T17:43:13.381+0000] {process_utils.py:194} INFO - Downloading termcolor-2.5.0-py3-none-any.whl (7.8 kB)
+[2025-01-01T17:43:13.388+0000] {process_utils.py:194} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2025-01-01T17:43:13.390+0000] {process_utils.py:194} INFO - Using cached time_machine-2.16.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (33 kB)
+[2025-01-01T17:43:13.392+0000] {process_utils.py:194} INFO - Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2025-01-01T17:43:13.404+0000] {process_utils.py:194} INFO - Downloading universal_pathlib-0.2.6-py3-none-any.whl (50 kB)
+[2025-01-01T17:43:13.425+0000] {process_utils.py:194} INFO - Downloading Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+[2025-01-01T17:43:13.487+0000] {process_utils.py:194} INFO - Downloading apache_***_providers_common_io-1.5.0-py3-none-any.whl (19 kB)
+[2025-01-01T17:43:13.507+0000] {process_utils.py:194} INFO - Downloading apache_***_providers_common_sql-1.21.0-py3-none-any.whl (49 kB)
+[2025-01-01T17:43:13.529+0000] {process_utils.py:194} INFO - Downloading apache_***_providers_ftp-3.12.0-py3-none-any.whl (19 kB)
+[2025-01-01T17:43:13.550+0000] {process_utils.py:194} INFO - Downloading apache_***_providers_http-5.0.0-py3-none-any.whl (27 kB)
+[2025-01-01T17:43:13.581+0000] {process_utils.py:194} INFO - Downloading apache_***_providers_imap-3.8.0-py3-none-any.whl (17 kB)
+[2025-01-01T17:43:13.611+0000] {process_utils.py:194} INFO - Downloading apache_***_providers_smtp-1.9.0-py3-none-any.whl (22 kB)
+[2025-01-01T17:43:13.633+0000] {process_utils.py:194} INFO - Downloading apache_***_providers_sqlite-4.0.0-py3-none-any.whl (12 kB)
+[2025-01-01T17:43:13.653+0000] {process_utils.py:194} INFO - Downloading aiohttp-3.11.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+[2025-01-01T17:43:14.007+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 5.2 MB/s eta 0:00:00
+[2025-01-01T17:43:14.023+0000] {process_utils.py:194} INFO - Downloading aiosqlite-0.20.0-py3-none-any.whl (15 kB)
+[2025-01-01T17:43:14.053+0000] {process_utils.py:194} INFO - Downloading cachelib-0.9.0-py3-none-any.whl (15 kB)
+[2025-01-01T17:43:14.087+0000] {process_utils.py:194} INFO - Downloading certifi-2024.12.14-py3-none-any.whl (164 kB)
+[2025-01-01T17:43:14.153+0000] {process_utils.py:194} INFO - Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (479 kB)
+[2025-01-01T17:43:14.288+0000] {process_utils.py:194} INFO - Downloading charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (145 kB)
+[2025-01-01T17:43:14.355+0000] {process_utils.py:194} INFO - Downloading click-8.1.8-py3-none-any.whl (98 kB)
+[2025-01-01T17:43:14.448+0000] {process_utils.py:194} INFO - Downloading clickclick-20.10.2-py2.py3-none-any.whl (7.4 kB)
+[2025-01-01T17:43:14.492+0000] {process_utils.py:194} INFO - Downloading Flask_Login-0.6.3-py3-none-any.whl (17 kB)
+[2025-01-01T17:43:14.549+0000] {process_utils.py:194} INFO - Downloading greenlet-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (613 kB)
+[2025-01-01T17:43:14.794+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 613.1/613.1 kB 4.0 MB/s eta 0:00:00
+[2025-01-01T17:43:14.804+0000] {process_utils.py:194} INFO - Downloading idna-3.10-py3-none-any.whl (70 kB)
+[2025-01-01T17:43:14.842+0000] {process_utils.py:194} INFO - Downloading importlib_metadata-8.5.0-py3-none-any.whl (26 kB)
+[2025-01-01T17:43:14.868+0000] {process_utils.py:194} INFO - Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+[2025-01-01T17:43:14.891+0000] {process_utils.py:194} INFO - Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+[2025-01-01T17:43:14.912+0000] {process_utils.py:194} INFO - Downloading jsonschema_specifications-2024.10.1-py3-none-any.whl (18 kB)
+[2025-01-01T17:43:14.947+0000] {process_utils.py:194} INFO - Downloading marshmallow-3.23.2-py3-none-any.whl (49 kB)
+[2025-01-01T17:43:14.991+0000] {process_utils.py:194} INFO - Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+[2025-01-01T17:43:15.018+0000] {process_utils.py:194} INFO - Downloading more_itertools-10.5.0-py3-none-any.whl (60 kB)
+[2025-01-01T17:43:15.056+0000] {process_utils.py:194} INFO - Using cached patsy-1.0.1-py2.py3-none-any.whl (232 kB)
+[2025-01-01T17:43:15.071+0000] {process_utils.py:194} INFO - Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (767 kB)
+[2025-01-01T17:43:15.264+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 767.5/767.5 kB 3.9 MB/s eta 0:00:00
+[2025-01-01T17:43:15.271+0000] {process_utils.py:194} INFO - Downloading referencing-0.35.1-py3-none-any.whl (26 kB)
+[2025-01-01T17:43:15.291+0000] {process_utils.py:194} INFO - Downloading rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (385 kB)
+[2025-01-01T17:43:15.386+0000] {process_utils.py:194} INFO - Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+[2025-01-01T17:43:15.394+0000] {process_utils.py:194} INFO - Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+[2025-01-01T17:43:15.428+0000] {process_utils.py:194} INFO - Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+[2025-01-01T17:43:15.452+0000] {process_utils.py:194} INFO - Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+[2025-01-01T17:43:15.470+0000] {process_utils.py:194} INFO - Downloading urllib3-2.3.0-py3-none-any.whl (128 kB)
+[2025-01-01T17:43:15.524+0000] {process_utils.py:194} INFO - Downloading wirerope-0.4.8-py2.py3-none-any.whl (9.1 kB)
+[2025-01-01T17:43:15.543+0000] {process_utils.py:194} INFO - Downloading wrapt-1.17.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (89 kB)
+[2025-01-01T17:43:15.574+0000] {process_utils.py:194} INFO - Downloading wtforms-3.2.1-py3-none-any.whl (152 kB)
+[2025-01-01T17:43:15.621+0000] {process_utils.py:194} INFO - Downloading anyio-4.7.0-py3-none-any.whl (93 kB)
+[2025-01-01T17:43:15.659+0000] {process_utils.py:194} INFO - Downloading Mako-1.3.8-py3-none-any.whl (78 kB)
+[2025-01-01T17:43:15.687+0000] {process_utils.py:194} INFO - Downloading uc_micro_py-1.0.3-py3-none-any.whl (6.2 kB)
+[2025-01-01T17:43:15.706+0000] {process_utils.py:194} INFO - Downloading aiohappyeyeballs-2.4.4-py3-none-any.whl (14 kB)
+[2025-01-01T17:43:15.719+0000] {process_utils.py:194} INFO - Downloading aiosignal-1.3.2-py2.py3-none-any.whl (7.6 kB)
+[2025-01-01T17:43:15.733+0000] {process_utils.py:194} INFO - Downloading apispec-6.8.0-py3-none-any.whl (30 kB)
+[2025-01-01T17:43:15.758+0000] {process_utils.py:194} INFO - Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+[2025-01-01T17:43:15.775+0000] {process_utils.py:194} INFO - Downloading email_validator-2.2.0-py3-none-any.whl (33 kB)
+[2025-01-01T17:43:15.797+0000] {process_utils.py:194} INFO - Downloading Flask_Babel-2.0.0-py3-none-any.whl (9.3 kB)
+[2025-01-01T17:43:15.825+0000] {process_utils.py:194} INFO - Downloading Flask_JWT_Extended-4.7.1-py2.py3-none-any.whl (22 kB)
+[2025-01-01T17:43:15.860+0000] {process_utils.py:194} INFO - Downloading Flask_Limiter-3.9.2-py3-none-any.whl (28 kB)
+[2025-01-01T17:43:15.883+0000] {process_utils.py:194} INFO - Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+[2025-01-01T17:43:15.902+0000] {process_utils.py:194} INFO - Downloading frozenlist-1.5.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (283 kB)
+[2025-01-01T17:43:15.972+0000] {process_utils.py:194} INFO - Downloading googleapis_common_protos-1.66.0-py2.py3-none-any.whl (221 kB)
+[2025-01-01T17:43:16.028+0000] {process_utils.py:194} INFO - Downloading grpcio-1.68.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.9 MB)
+[2025-01-01T17:43:17.022+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.9/5.9 MB 6.0 MB/s eta 0:00:00
+[2025-01-01T17:43:17.030+0000] {process_utils.py:194} INFO - Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+[2025-01-01T17:43:17.055+0000] {process_utils.py:194} INFO - Downloading marshmallow_sqlalchemy-0.28.2-py2.py3-none-any.whl (16 kB)
+[2025-01-01T17:43:17.081+0000] {process_utils.py:194} INFO - Downloading multidict-6.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (131 kB)
+[2025-01-01T17:43:17.177+0000] {process_utils.py:194} INFO - Downloading opentelemetry_sdk-1.29.0-py3-none-any.whl (118 kB)
+[2025-01-01T17:43:17.221+0000] {process_utils.py:194} INFO - Downloading opentelemetry_semantic_conventions-0.50b0-py3-none-any.whl (166 kB)
+[2025-01-01T17:43:17.271+0000] {process_utils.py:194} INFO - Downloading prison-0.2.1-py2.py3-none-any.whl (5.8 kB)
+[2025-01-01T17:43:17.292+0000] {process_utils.py:194} INFO - Downloading propcache-0.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (243 kB)
+[2025-01-01T17:43:17.338+0000] {process_utils.py:194} INFO - Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+[2025-01-01T17:43:17.364+0000] {process_utils.py:194} INFO - Downloading SQLAlchemy_Utils-0.41.2-py3-none-any.whl (93 kB)
+[2025-01-01T17:43:17.397+0000] {process_utils.py:194} INFO - Downloading yarl-1.18.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (336 kB)
+[2025-01-01T17:43:17.471+0000] {process_utils.py:194} INFO - Downloading zipp-3.21.0-py3-none-any.whl (9.6 kB)
+[2025-01-01T17:43:17.487+0000] {process_utils.py:194} INFO - Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+[2025-01-01T17:43:17.527+0000] {process_utils.py:194} INFO - Downloading babel-2.16.0-py3-none-any.whl (9.6 MB)
+[2025-01-01T17:43:19.099+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.6/9.6 MB 6.2 MB/s eta 0:00:00
+[2025-01-01T17:43:19.107+0000] {process_utils.py:194} INFO - Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+[2025-01-01T17:43:19.182+0000] {process_utils.py:194} INFO - Downloading limits-3.14.1-py3-none-any.whl (45 kB)
+[2025-01-01T17:43:19.217+0000] {process_utils.py:194} INFO - Downloading ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+[2025-01-01T17:43:19.272+0000] {process_utils.py:194} INFO - Downloading protobuf-5.29.2-cp38-abi3-manylinux2014_x86_64.whl (319 kB)
+[2025-01-01T17:43:19.657+0000] {process_utils.py:194} INFO - Building wheels for collected packages: python-nvd3
+[2025-01-01T17:43:19.660+0000] {process_utils.py:194} INFO -   Building wheel for python-nvd3 (pyproject.toml): started
+[2025-01-01T17:43:20.355+0000] {process_utils.py:194} INFO -   Building wheel for python-nvd3 (pyproject.toml): finished with status 'done'
+[2025-01-01T17:43:20.370+0000] {process_utils.py:194} INFO -   Created wheel for python-nvd3: filename=python_nvd3-0.16.0-py3-none-any.whl size=37572 sha256=aa1806716de69d6cf297aca40f89be9f14e2b6202c3ddbe6a9337fe0f8ab765f
+[2025-01-01T17:43:20.386+0000] {process_utils.py:194} INFO -   Stored in directory: /home/***/.cache/pip/wheels/97/ca/3e/4acf0f36254adde4cf5654b0b4c6f922068788e397392dca49
+[2025-01-01T17:43:20.420+0000] {process_utils.py:194} INFO - Successfully built python-nvd3
+[2025-01-01T17:43:20.739+0000] {process_utils.py:194} INFO - Installing collected packages: text-unidecode, pytz, lockfile, cron-descriptor, zipp, wrapt, urllib3, uc-micro-py, tzdata, typing-extensions, threadpoolctl, termcolor, tenacity, tabulate, sqlparse, sniffio, six, setproctitle, rpds-py, PyYAML, python-slugify, python-daemon, pyjwt, pygments, pycparser, psutil, protobuf, propcache, pluggy, pathspec, packaging, ordered-set, numpy, multidict, more-itertools, mdurl, markupsafe, lazy-object-proxy, joblib, jmespath, itsdangerous, inflection, idna, h11, grpcio, greenlet, google-re2, fsspec, frozenlist, dnspython, dill, configupdater, colorlog, colorama, click, charset-normalizer, certifi, cachelib, blinker, Babel, attrs, asgiref, argcomplete, aiohappyeyeballs, yarl, WTForms, wirerope, werkzeug, universal-pathlib, sqlalchemy, scipy, rfc3339-validator, requests, referencing, python-dateutil, prison, patsy, opentelemetry-proto, marshmallow, markdown-it-py, Mako, linkify-it-py, jinja2, importlib-metadata, httpcore, gunicorn, googleapis-common-protos, email-validator, deprecated, clickclick, cffi, apispec, anyio, aiosqlite, aiosignal, time-machine, sqlalchemy-utils, sqlalchemy-jsonfield, scikit-learn, rich, requests-toolbelt, python-nvd3, pandas, opentelemetry-exporter-otlp-proto-common, opentelemetry-api, methodtools, mdit-py-plugins, marshmallow-sqlalchemy, marshmallow-oneofschema, limits, jsonschema-specifications, httpx, flask, cryptography, croniter, alembic, aiohttp, statsmodels, rich-argparse, pendulum, opentelemetry-semantic-conventions, jsonschema, flask-wtf, Flask-SQLAlchemy, flask-session, flask-login, Flask-Limiter, Flask-JWT-Extended, flask-caching, Flask-Babel, opentelemetry-sdk, flask-appbuilder, feature-engine, connexion, opentelemetry-exporter-otlp-proto-http, opentelemetry-exporter-otlp-proto-grpc, opentelemetry-exporter-otlp, apache-***-providers-common-sql, apache-***-providers-common-compat, apache-***-providers-sqlite, apache-***-providers-smtp, apache-***-providers-imap, apache-***-providers-http, apache-***-providers-ftp, apache-***-providers-fab, apache-***-providers-common-io, apache-***
+[2025-01-01T17:44:00.551+0000] {process_utils.py:194} INFO - Successfully installed Babel-2.16.0 Flask-Babel-2.0.0 Flask-JWT-Extended-4.7.1 Flask-Limiter-3.9.2 Flask-SQLAlchemy-2.5.1 Mako-1.3.8 PyYAML-6.0.2 WTForms-3.2.1 aiohappyeyeballs-2.4.4 aiohttp-3.11.11 aiosignal-1.3.2 aiosqlite-0.20.0 alembic-1.14.0 anyio-4.7.0 apache-***-2.10.4 apache-***-providers-common-compat-1.3.0 apache-***-providers-common-io-1.5.0 apache-***-providers-common-sql-1.21.0 apache-***-providers-fab-1.5.1 apache-***-providers-ftp-3.12.0 apache-***-providers-http-5.0.0 apache-***-providers-imap-3.8.0 apache-***-providers-smtp-1.9.0 apache-***-providers-sqlite-4.0.0 apispec-6.8.0 argcomplete-3.5.3 asgiref-3.8.1 attrs-24.3.0 blinker-1.9.0 cachelib-0.9.0 certifi-2024.12.14 cffi-1.17.1 charset-normalizer-3.4.1 click-8.1.8 clickclick-20.10.2 colorama-0.4.6 colorlog-6.9.0 configupdater-3.2 connexion-2.14.2 cron-descriptor-1.4.5 croniter-6.0.0 cryptography-44.0.0 deprecated-1.2.15 dill-0.3.9 dnspython-2.7.0 email-validator-2.2.0 feature-engine-1.8.2 flask-2.2.5 flask-appbuilder-4.5.2 flask-caching-2.3.0 flask-login-0.6.3 flask-session-0.5.0 flask-wtf-1.2.2 frozenlist-1.5.0 fsspec-2024.12.0 google-re2-1.1.20240702 googleapis-common-protos-1.66.0 greenlet-3.1.1 grpcio-1.68.1 gunicorn-23.0.0 h11-0.14.0 httpcore-1.0.7 httpx-0.28.1 idna-3.10 importlib-metadata-8.5.0 inflection-0.5.1 itsdangerous-2.2.0 jinja2-3.1.5 jmespath-1.0.1 joblib-1.3.2 jsonschema-4.23.0 jsonschema-specifications-2024.10.1 lazy-object-proxy-1.10.0 limits-3.14.1 linkify-it-py-2.0.3 lockfile-0.12.2 markdown-it-py-3.0.0 markupsafe-3.0.2 marshmallow-3.23.2 marshmallow-oneofschema-3.1.1 marshmallow-sqlalchemy-0.28.2 mdit-py-plugins-0.4.2 mdurl-0.1.2 methodtools-0.4.7 more-itertools-10.5.0 multidict-6.1.0 numpy-1.26.4 opentelemetry-api-1.29.0 opentelemetry-exporter-otlp-1.29.0 opentelemetry-exporter-otlp-proto-common-1.29.0 opentelemetry-exporter-otlp-proto-grpc-1.29.0 opentelemetry-exporter-otlp-proto-http-1.29.0 opentelemetry-proto-1.29.0 opentelemetry-sdk-1.29.0 opentelemetry-semantic-conventions-0.50b0 ordered-set-4.1.0 packaging-24.2 pandas-2.2.3 pathspec-0.12.1 patsy-1.0.1 pendulum-3.0.0 pluggy-1.5.0 prison-0.2.1 propcache-0.2.1 protobuf-5.29.2 psutil-6.1.1 pycparser-2.22 pygments-2.18.0 pyjwt-2.10.1 python-daemon-3.1.2 python-dateutil-2.9.0.post0 python-nvd3-0.16.0 python-slugify-8.0.4 pytz-2024.2 referencing-0.35.1 requests-2.32.3 requests-toolbelt-1.0.0 rfc3339-validator-0.1.4 rich-13.9.4 rich-argparse-1.6.0 rpds-py-0.22.3 scikit-learn-1.5.2 scipy-1.14.1 setproctitle-1.3.4 six-1.17.0 sniffio-1.3.1 sqlalchemy-1.4.54 sqlalchemy-jsonfield-1.0.2 sqlalchemy-utils-0.41.2 sqlparse-0.5.3 statsmodels-0.14.4 tabulate-0.9.0 tenacity-9.0.0 termcolor-2.5.0 text-unidecode-1.3 threadpoolctl-3.5.0 time-machine-2.16.0 typing-extensions-4.12.2 tzdata-2024.2 uc-micro-py-1.0.3 universal-pathlib-0.2.6 urllib3-2.3.0 werkzeug-2.2.3 wirerope-0.4.8 wrapt-1.17.0 yarl-1.18.3 zipp-3.21.0
+[2025-01-01T17:44:02.662+0000] {python.py:513} INFO - Use 'pickle' as serializer.
+[2025-01-01T17:44:02.689+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvsnzuxp3o/bin/python /tmp/venv-callazc_1bcc/script.py /tmp/venv-callazc_1bcc/script.in /tmp/venv-callazc_1bcc/script.out /tmp/venv-callazc_1bcc/string_args.txt /tmp/venv-callazc_1bcc/termination.log
+[2025-01-01T17:44:02.691+0000] {process_utils.py:190} INFO - Output:
+[2025-01-01T17:44:05.867+0000] {process_utils.py:194} INFO - Traceback (most recent call last):
+[2025-01-01T17:44:05.870+0000] {process_utils.py:194} INFO -   File "/tmp/venv-callazc_1bcc/script.py", line 98, in <module>
+[2025-01-01T17:44:05.872+0000] {process_utils.py:194} INFO -     res = task_predict_model(*arg_dict["args"], **arg_dict["kwargs"])
+[2025-01-01T17:44:05.874+0000] {process_utils.py:194} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-01T17:44:05.874+0000] {process_utils.py:194} INFO -   File "/tmp/venv-callazc_1bcc/script.py", line 32, in task_predict_model
+[2025-01-01T17:44:05.882+0000] {process_utils.py:194} INFO -     Variable.set(key="error_val", value="")
+[2025-01-01T17:44:05.883+0000] {process_utils.py:194} INFO -   File "/tmp/venvsnzuxp3o/lib/python3.12/site-packages/***/utils/session.py", line 96, in wrapper
+[2025-01-01T17:44:05.884+0000] {process_utils.py:194} INFO -     with create_session() as session:
+[2025-01-01T17:44:05.885+0000] {process_utils.py:194} INFO -          ^^^^^^^^^^^^^^^^
+[2025-01-01T17:44:05.886+0000] {process_utils.py:194} INFO -   File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+[2025-01-01T17:44:05.899+0000] {process_utils.py:194} INFO -     return next(self.gen)
+[2025-01-01T17:44:05.900+0000] {process_utils.py:194} INFO -            ^^^^^^^^^^^^^^
+[2025-01-01T17:44:05.905+0000] {process_utils.py:194} INFO -   File "/tmp/venvsnzuxp3o/lib/python3.12/site-packages/***/utils/session.py", line 53, in create_session
+[2025-01-01T17:44:05.907+0000] {process_utils.py:194} INFO -     raise RuntimeError("Session must be set before!")
+[2025-01-01T17:44:05.909+0000] {process_utils.py:194} INFO - RuntimeError: Session must be set before!
+[2025-01-01T17:44:07.460+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 870, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 588, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+Session must be set before!
+[2025-01-01T17:44:07.469+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-01-01T17:44:07.470+0000] {logging_mixin.py:190} INFO - Task start:2025-01-01 17:42:25.128115+00:00 end:2025-01-01 17:44:07.468734+00:00 duration:102.340619
+[2025-01-01T17:44:07.471+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonVirtualenvDecoratedOperator): predict_model> dag:<DAG: prediction_dag_v1> dagrun:<DagRun prediction_dag_v1 @ 2025-01-01 17:42:18.501650+00:00: manual__2025-01-01T17:42:18.501650+00:00, state:running, queued_at: 2025-01-01 17:42:18.528384+00:00. externally triggered: True>
+[2025-01-01T17:44:07.472+0000] {logging_mixin.py:190} INFO - Failure caused by Process returned non-zero exit status 1.
+Session must be set before!
+[2025-01-01T17:44:07.473+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=prediction_dag_v1, task_id=predict_model, run_id=manual__2025-01-01T17:42:18.501650+00:00, execution_date=20250101T174218, start_date=20250101T174225, end_date=20250101T174407
+[2025-01-01T17:44:07.488+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-01T17:44:07.489+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 13 for task predict_model (Process returned non-zero exit status 1.
+Session must be set before!; 791)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 870, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 588, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+Session must be set before!
+[2025-01-01T17:44:07.531+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-01T17:44:07.550+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-01T17:44:07.553+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

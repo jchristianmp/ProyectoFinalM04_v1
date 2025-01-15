@@ -1,0 +1,41 @@
+[2024-12-27T05:27:41.351+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-27T05:27:41.382+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: execution_date_test.data_preparation manual__2024-12-27T05:27:37.020351+00:00 [queued]>
+[2024-12-27T05:27:41.400+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: execution_date_test.data_preparation manual__2024-12-27T05:27:37.020351+00:00 [queued]>
+[2024-12-27T05:27:41.401+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-27T05:27:41.438+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): data_preparation> on 2024-12-27 05:27:37.020351+00:00
+[2024-12-27T05:27:41.456+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1768) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-27T05:27:41.461+0000] {standard_task_runner.py:72} INFO - Started process 1770 to run task
+[2024-12-27T05:27:41.463+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'execution_date_test', 'data_preparation', 'manual__2024-12-27T05:27:37.020351+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/02_prediction/02_prediction_vtest.py', '--cfg-path', '/tmp/tmpe3n8ori3']
+[2024-12-27T05:27:41.467+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask data_preparation
+[2024-12-27T05:27:41.557+0000] {task_command.py:467} INFO - Running <TaskInstance: execution_date_test.data_preparation manual__2024-12-27T05:27:37.020351+00:00 [running]> on host f83652127260
+[2024-12-27T05:27:41.657+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='cm' AIRFLOW_CTX_DAG_ID='execution_date_test' AIRFLOW_CTX_TASK_ID='data_preparation' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T05:27:37.020351+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-27T05:27:37.020351+00:00'
+[2024-12-27T05:27:41.659+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-27T05:27:41.660+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-27T05:27:41.661+0000] {logging_mixin.py:190} INFO - Current task name:data_preparation state:running start_date:2024-12-27 05:27:41.384240+00:00
+[2024-12-27T05:27:41.662+0000] {logging_mixin.py:190} INFO - Dag name:execution_date_test and current dag run status:running
+[2024-12-27T05:27:41.663+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-27T05:27:41.698+0000] {python.py:240} INFO - Done. Returned value was:              model  year motor_type  ...     status motor_volume        date
+0              kia     4     petrol  ...  excellent          2.0  2024-12-27
+1           nissan     7     petrol  ...  excellent          2.0  2024-12-27
+2          hyundai     3     petrol  ...  excellent          2.0  2024-12-27
+3              kia     6     petrol  ...  excellent          2.0  2024-12-27
+4    mercedes-benz    21     petrol  ...     normal          1.8  2024-12-27
+..             ...   ...        ...  ...        ...          ...         ...
+406         nissan     3     petrol  ...  excellent          2.0  2024-12-27
+407        hyundai     7     petrol  ...  excellent          2.0  2024-12-27
+408  mercedes-benz    12     petrol  ...       good          2.0  2024-12-27
+409            kia     4     petrol  ...       good          2.0  2024-12-27
+410        hyundai     7     petrol  ...  excellent          2.0  2024-12-27
+
+[411 rows x 10 columns]
+[2024-12-27T05:27:42.095+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-27T05:27:42.096+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=execution_date_test, task_id=data_preparation, run_id=manual__2024-12-27T05:27:37.020351+00:00, execution_date=20241227T052737, start_date=20241227T052741, end_date=20241227T052742
+[2024-12-27T05:27:42.106+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-27T05:27:42.107+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-27T05:27:42.108+0000] {logging_mixin.py:190} INFO - Dag name:execution_date_test queued_at:2024-12-27 05:27:37.076857+00:00
+[2024-12-27T05:27:42.108+0000] {logging_mixin.py:190} INFO - Task hostname:f83652127260 operator:_PythonDecoratedOperator
+[2024-12-27T05:27:42.127+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-27T05:27:42.158+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-27T05:27:42.162+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

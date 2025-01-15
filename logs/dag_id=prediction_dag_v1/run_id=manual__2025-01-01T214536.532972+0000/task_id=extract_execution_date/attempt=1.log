@@ -1,0 +1,28 @@
+[2025-01-01T21:45:39.308+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-01T21:45:39.570+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: prediction_dag_v1.extract_execution_date manual__2025-01-01T21:45:36.532972+00:00 [queued]>
+[2025-01-01T21:45:39.585+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: prediction_dag_v1.extract_execution_date manual__2025-01-01T21:45:36.532972+00:00 [queued]>
+[2025-01-01T21:45:39.586+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-01T21:45:39.606+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): extract_execution_date> on 2025-01-01 21:45:36.532972+00:00
+[2025-01-01T21:45:39.615+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1388) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-01T21:45:39.618+0000] {standard_task_runner.py:72} INFO - Started process 1393 to run task
+[2025-01-01T21:45:39.617+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'prediction_dag_v1', 'extract_execution_date', 'manual__2025-01-01T21:45:36.532972+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/02_prediction/02_prediction_v1.py', '--cfg-path', '/tmp/tmpogwfm4kc']
+[2025-01-01T21:45:39.619+0000] {standard_task_runner.py:105} INFO - Job 35: Subtask extract_execution_date
+[2025-01-01T21:45:39.668+0000] {task_command.py:467} INFO - Running <TaskInstance: prediction_dag_v1.extract_execution_date manual__2025-01-01T21:45:36.532972+00:00 [running]> on host 935cb972f608
+[2025-01-01T21:45:39.750+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='cm' AIRFLOW_CTX_DAG_ID='prediction_dag_v1' AIRFLOW_CTX_TASK_ID='extract_execution_date' AIRFLOW_CTX_EXECUTION_DATE='2025-01-01T21:45:36.532972+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-01T21:45:36.532972+00:00'
+[2025-01-01T21:45:39.753+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-01T21:45:39.755+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-01T21:45:39.756+0000] {logging_mixin.py:190} INFO - Current task name:extract_execution_date state:running start_date:2025-01-01 21:45:39.571991+00:00
+[2025-01-01T21:45:39.757+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 and current dag run status:running
+[2025-01-01T21:45:39.759+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-01T21:45:39.761+0000] {python.py:240} INFO - Done. Returned value was: 2025-01-01 16:45:36.532972-05:00
+[2025-01-01T21:45:39.791+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-01T21:45:39.793+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=prediction_dag_v1, task_id=extract_execution_date, run_id=manual__2025-01-01T21:45:36.532972+00:00, execution_date=20250101T214536, start_date=20250101T214539, end_date=20250101T214539
+[2025-01-01T21:45:39.803+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-01T21:45:39.804+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-01T21:45:39.806+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 queued_at:2025-01-01 21:45:36.543787+00:00
+[2025-01-01T21:45:39.806+0000] {logging_mixin.py:190} INFO - Task hostname:935cb972f608 operator:_PythonDecoratedOperator
+[2025-01-01T21:45:39.834+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-01T21:45:39.853+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-01T21:45:39.855+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

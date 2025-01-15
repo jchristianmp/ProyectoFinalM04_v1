@@ -1,0 +1,41 @@
+[2025-01-01T21:36:40.016+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-01T21:36:40.214+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: prediction_dag_v1.data_preparation manual__2025-01-01T21:36:36.353152+00:00 [queued]>
+[2025-01-01T21:36:40.227+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: prediction_dag_v1.data_preparation manual__2025-01-01T21:36:36.353152+00:00 [queued]>
+[2025-01-01T21:36:40.228+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-01T21:36:40.246+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): data_preparation> on 2025-01-01 21:36:36.353152+00:00
+[2025-01-01T21:36:40.257+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1001) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-01T21:36:40.260+0000] {standard_task_runner.py:72} INFO - Started process 1017 to run task
+[2025-01-01T21:36:40.260+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'prediction_dag_v1', 'data_preparation', 'manual__2025-01-01T21:36:36.353152+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/02_prediction/02_prediction_v1.py', '--cfg-path', '/tmp/tmpvly2as_v']
+[2025-01-01T21:36:40.262+0000] {standard_task_runner.py:105} INFO - Job 23: Subtask data_preparation
+[2025-01-01T21:36:40.318+0000] {task_command.py:467} INFO - Running <TaskInstance: prediction_dag_v1.data_preparation manual__2025-01-01T21:36:36.353152+00:00 [running]> on host 935cb972f608
+[2025-01-01T21:36:40.398+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='cm' AIRFLOW_CTX_DAG_ID='prediction_dag_v1' AIRFLOW_CTX_TASK_ID='data_preparation' AIRFLOW_CTX_EXECUTION_DATE='2025-01-01T21:36:36.353152+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-01T21:36:36.353152+00:00'
+[2025-01-01T21:36:40.399+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-01T21:36:40.400+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-01T21:36:40.401+0000] {logging_mixin.py:190} INFO - Current task name:data_preparation state:running start_date:2025-01-01 21:36:40.215654+00:00
+[2025-01-01T21:36:40.402+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 and current dag run status:running
+[2025-01-01T21:36:40.402+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-01T21:36:40.426+0000] {python.py:240} INFO - Done. Returned value was:              model  year motor_type  ...     status motor_volume        date
+0              kia     5     petrol  ...  excellent          2.0  2025-01-01
+1           nissan     8     petrol  ...  excellent          2.0  2025-01-01
+2          hyundai     4     petrol  ...  excellent          2.0  2025-01-01
+3              kia     7     petrol  ...  excellent          2.0  2025-01-01
+4    mercedes-benz    22     petrol  ...     normal          1.8  2025-01-01
+..             ...   ...        ...  ...        ...          ...         ...
+406         nissan     4     petrol  ...  excellent          2.0  2025-01-01
+407        hyundai     8     petrol  ...  excellent          2.0  2025-01-01
+408  mercedes-benz    13     petrol  ...       good          2.0  2025-01-01
+409            kia     5     petrol  ...       good          2.0  2025-01-01
+410        hyundai     8     petrol  ...  excellent          2.0  2025-01-01
+
+[411 rows x 10 columns]
+[2025-01-01T21:36:40.483+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-01T21:36:40.484+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=prediction_dag_v1, task_id=data_preparation, run_id=manual__2025-01-01T21:36:36.353152+00:00, execution_date=20250101T213636, start_date=20250101T213640, end_date=20250101T213640
+[2025-01-01T21:36:40.494+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-01T21:36:40.495+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-01T21:36:40.496+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag_v1 queued_at:2025-01-01 21:36:36.367967+00:00
+[2025-01-01T21:36:40.496+0000] {logging_mixin.py:190} INFO - Task hostname:935cb972f608 operator:_PythonDecoratedOperator
+[2025-01-01T21:36:40.517+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-01T21:36:40.536+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-01T21:36:40.538+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

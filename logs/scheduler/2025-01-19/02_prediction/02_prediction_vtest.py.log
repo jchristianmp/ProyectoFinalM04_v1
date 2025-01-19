@@ -1,0 +1,183 @@
+[2025-01-19T21:39:19.172+0000] {processor.py:186} INFO - Started process (PID=86) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:39:19.175+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:39:19.184+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.183+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:39:19.252+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:39:19.591+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.590+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:execution_date_test
+[2025-01-19T21:39:19.604+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.603+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:execution_date_test
+[2025-01-19T21:39:19.614+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.614+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:execution_date_test
+[2025-01-19T21:39:19.624+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.623+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:execution_date_test
+[2025-01-19T21:39:19.633+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.632+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:execution_date_test
+[2025-01-19T21:39:19.641+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.641+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:execution_date_test
+[2025-01-19T21:39:19.656+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.656+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:execution_date_test
+[2025-01-19T21:39:19.657+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.657+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:39:19.672+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.672+0000] {dag.py:3262} INFO - Creating ORM DAG for execution_date_test
+[2025-01-19T21:39:19.674+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.673+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:39:19.699+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.547 seconds
+[2025-01-19T21:39:50.618+0000] {processor.py:186} INFO - Started process (PID=155) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:39:50.623+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:39:50.627+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:50.626+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:39:50.715+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:39:50.784+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:50.783+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:39:50.821+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:50.821+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:39:50.874+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.292 seconds
+[2025-01-19T21:40:21.252+0000] {processor.py:186} INFO - Started process (PID=224) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:40:21.254+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:40:21.259+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:21.259+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:40:21.300+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:40:21.325+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:21.324+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:40:21.352+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:21.351+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:40:21.388+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.144 seconds
+[2025-01-19T21:40:51.577+0000] {processor.py:186} INFO - Started process (PID=293) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:40:51.580+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:40:51.585+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:51.584+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:40:51.631+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:40:51.658+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:51.657+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:40:51.674+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:51.674+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:40:51.698+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.133 seconds
+[2025-01-19T21:41:22.054+0000] {processor.py:186} INFO - Started process (PID=362) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:41:22.055+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:41:22.058+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:22.057+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:41:22.115+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:41:22.160+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:22.160+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:41:22.181+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:22.180+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:41:22.204+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.156 seconds
+[2025-01-19T21:41:52.635+0000] {processor.py:186} INFO - Started process (PID=431) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:41:52.642+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:41:52.648+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:52.647+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:41:52.744+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:41:52.773+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:52.773+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:41:52.796+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:52.796+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:41:52.846+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.221 seconds
+[2025-01-19T21:42:23.537+0000] {processor.py:186} INFO - Started process (PID=500) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:42:23.538+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:42:23.541+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:23.540+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:42:23.567+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:42:23.602+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:23.602+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:42:23.614+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:23.614+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:42:23.704+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.173 seconds
+[2025-01-19T21:42:54.078+0000] {processor.py:186} INFO - Started process (PID=569) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:42:54.080+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:42:54.086+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:54.085+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:42:54.133+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:42:54.180+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:54.179+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:42:54.207+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:54.206+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:42:54.230+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.162 seconds
+[2025-01-19T21:43:24.662+0000] {processor.py:186} INFO - Started process (PID=638) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:43:24.664+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:43:24.666+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:24.666+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:43:24.694+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:43:24.712+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:24.711+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:43:24.727+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:24.727+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:43:24.754+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.098 seconds
+[2025-01-19T21:43:55.223+0000] {processor.py:186} INFO - Started process (PID=707) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:43:55.225+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:43:55.228+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:55.228+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:43:55.289+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:43:55.307+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:55.307+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:43:55.321+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:55.321+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:43:55.340+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.126 seconds
+[2025-01-19T21:44:25.711+0000] {processor.py:186} INFO - Started process (PID=776) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:44:25.713+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:44:25.717+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:25.716+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:44:25.754+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:44:25.784+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:25.783+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:44:25.805+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:25.804+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:44:25.844+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.140 seconds
+[2025-01-19T21:44:55.986+0000] {processor.py:186} INFO - Started process (PID=845) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:44:55.988+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:44:55.990+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:55.990+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:44:56.047+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:44:56.075+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:56.075+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:44:56.093+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:56.092+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:44:56.126+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.148 seconds
+[2025-01-19T21:45:26.370+0000] {processor.py:186} INFO - Started process (PID=914) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:45:26.372+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:45:26.375+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:26.375+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:45:26.422+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:45:26.440+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:26.439+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:45:26.453+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:26.452+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:45:26.473+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.110 seconds
+[2025-01-19T21:45:56.715+0000] {processor.py:186} INFO - Started process (PID=984) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:45:56.716+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:45:56.719+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:56.719+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:45:56.746+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:45:56.763+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:56.763+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:45:56.776+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:56.776+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:45:56.796+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.087 seconds
+[2025-01-19T21:46:27.162+0000] {processor.py:186} INFO - Started process (PID=1053) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:46:27.163+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:46:27.166+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:46:27.165+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:46:27.200+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:46:27.222+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:46:27.221+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:46:27.246+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:46:27.246+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:46:27.272+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.116 seconds
+[2025-01-19T21:46:57.773+0000] {processor.py:186} INFO - Started process (PID=1121) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:46:57.774+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:46:57.777+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:46:57.777+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:46:57.817+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:46:57.837+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:46:57.837+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:46:57.859+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:46:57.858+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:46:57.878+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.114 seconds
+[2025-01-19T21:47:28.363+0000] {processor.py:186} INFO - Started process (PID=1196) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:47:28.364+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:47:28.367+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:28.367+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:47:28.408+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:47:28.431+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:28.431+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:47:28.449+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:28.449+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:47:28.486+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.132 seconds
+[2025-01-19T21:47:58.796+0000] {processor.py:186} INFO - Started process (PID=1265) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:47:58.798+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:47:58.803+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:58.802+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:47:58.851+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:47:58.871+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:58.871+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:47:58.885+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:58.885+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:47:58.904+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.121 seconds
+[2025-01-19T21:48:29.621+0000] {processor.py:186} INFO - Started process (PID=1334) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:48:29.623+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:48:29.626+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:48:29.626+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:48:29.689+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:48:29.716+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:48:29.716+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:48:29.732+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:48:29.731+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:48:29.896+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.281 seconds
+[2025-01-19T21:49:00.525+0000] {processor.py:186} INFO - Started process (PID=1403) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:49:00.531+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:49:00.539+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:00.538+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:49:00.601+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:49:00.622+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:00.622+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:49:00.645+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:00.644+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:49:00.692+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.180 seconds
+[2025-01-19T21:49:31.232+0000] {processor.py:186} INFO - Started process (PID=1472) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:49:31.235+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:49:31.240+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:31.239+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:49:31.354+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:49:31.376+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:31.376+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:49:31.391+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:31.390+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:49:31.413+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.194 seconds
+[2025-01-19T21:50:02.134+0000] {processor.py:186} INFO - Started process (PID=1541) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:50:02.138+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:50:02.141+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:02.141+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:50:02.238+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:50:02.261+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:02.261+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:50:02.274+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:02.274+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:50:02.292+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.164 seconds
+[2025-01-19T21:50:32.967+0000] {processor.py:186} INFO - Started process (PID=1608) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:50:32.970+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:50:32.974+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:32.974+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:50:33.032+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:50:33.076+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:33.076+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:50:33.113+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:33.112+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:50:33.144+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.187 seconds
+[2025-01-19T21:51:03.879+0000] {processor.py:186} INFO - Started process (PID=1677) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:51:03.883+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:51:03.889+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:51:03.888+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:51:03.959+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:51:03.984+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:51:03.983+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:51:04.000+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:51:03.999+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:51:04.019+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.151 seconds
+[2025-01-19T21:51:34.215+0000] {processor.py:186} INFO - Started process (PID=1746) to work on /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:51:34.218+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_prediction/02_prediction_vtest.py for tasks to queue
+[2025-01-19T21:51:34.224+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:51:34.223+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:51:34.272+0000] {processor.py:925} INFO - DAG(s) 'execution_date_test' retrieved from /opt/airflow/dags/02_prediction/02_prediction_vtest.py
+[2025-01-19T21:51:34.292+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:51:34.292+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:51:34.309+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:51:34.309+0000] {dag.py:4180} INFO - Setting next_dagrun for execution_date_test to None, run_after=None
+[2025-01-19T21:51:34.335+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_prediction/02_prediction_vtest.py took 0.132 seconds

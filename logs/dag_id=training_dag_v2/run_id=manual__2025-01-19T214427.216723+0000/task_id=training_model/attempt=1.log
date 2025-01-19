@@ -1,0 +1,92 @@
+[2025-01-19T21:44:33.036+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-19T21:44:33.058+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: training_dag_v2.training_model manual__2025-01-19T21:44:27.216723+00:00 [queued]>
+[2025-01-19T21:44:33.069+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: training_dag_v2.training_model manual__2025-01-19T21:44:27.216723+00:00 [queued]>
+[2025-01-19T21:44:33.070+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-19T21:44:33.088+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): training_model> on 2025-01-19 21:44:27.216723+00:00
+[2025-01-19T21:44:33.096+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=144) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-19T21:44:33.098+0000] {standard_task_runner.py:72} INFO - Started process 146 to run task
+[2025-01-19T21:44:33.098+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'training_dag_v2', 'training_model', 'manual__2025-01-19T21:44:27.216723+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/01_training/01_training_v2.py', '--cfg-path', '/tmp/tmpcnyl4377']
+[2025-01-19T21:44:33.100+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask training_model
+[2025-01-19T21:44:33.172+0000] {task_command.py:467} INFO - Running <TaskInstance: training_dag_v2.training_model manual__2025-01-19T21:44:27.216723+00:00 [running]> on host 6f89a35ca1b5
+[2025-01-19T21:44:33.363+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='cm' AIRFLOW_CTX_DAG_ID='training_dag_v2' AIRFLOW_CTX_TASK_ID='training_model' AIRFLOW_CTX_EXECUTION_DATE='2025-01-19T21:44:27.216723+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-19T21:44:27.216723+00:00'
+[2025-01-19T21:44:33.368+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-19T21:44:33.370+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-19T21:44:33.371+0000] {logging_mixin.py:190} INFO - Current task name:training_model state:running start_date:2025-01-19 21:44:33.060236+00:00
+[2025-01-19T21:44:33.373+0000] {logging_mixin.py:190} INFO - Dag name:training_dag_v2 and current dag run status:running
+[2025-01-19T21:44:33.374+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-19T21:44:33.383+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv1rx_ztgn --python=python
+[2025-01-19T21:44:33.387+0000] {process_utils.py:190} INFO - Output:
+[2025-01-19T21:44:34.773+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.7.final.0-64 in 677ms
+[2025-01-19T21:44:34.774+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venv1rx_ztgn, clear=False, no_vcs_ignore=False, global=False)
+[2025-01-19T21:44:34.777+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2025-01-19T21:44:34.777+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2025-01-19T21:44:34.778+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2025-01-19T21:44:34.800+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venv1rx_ztgn/bin/pip install -r /tmp/venv1rx_ztgn/requirements.txt
+[2025-01-19T21:44:34.801+0000] {process_utils.py:190} INFO - Output:
+[2025-01-19T21:44:36.650+0000] {process_utils.py:194} INFO - Collecting feature-engine==1.8.2 (from -r /tmp/venv1rx_ztgn/requirements.txt (line 1))
+[2025-01-19T21:44:36.792+0000] {process_utils.py:194} INFO -   Downloading feature_engine-1.8.2-py2.py3-none-any.whl.metadata (9.9 kB)
+[2025-01-19T21:44:36.842+0000] {process_utils.py:194} INFO - Collecting joblib==1.3.2 (from -r /tmp/venv1rx_ztgn/requirements.txt (line 2))
+[2025-01-19T21:44:36.853+0000] {process_utils.py:194} INFO -   Downloading joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+[2025-01-19T21:44:37.436+0000] {process_utils.py:194} INFO - Collecting numpy==1.26.4 (from -r /tmp/venv1rx_ztgn/requirements.txt (line 3))
+[2025-01-19T21:44:37.447+0000] {process_utils.py:194} INFO -   Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+[2025-01-19T21:44:37.807+0000] {process_utils.py:194} INFO - Collecting pandas==2.2.3 (from -r /tmp/venv1rx_ztgn/requirements.txt (line 4))
+[2025-01-19T21:44:37.817+0000] {process_utils.py:194} INFO -   Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2025-01-19T21:44:37.934+0000] {process_utils.py:194} INFO - Collecting python-multipart==0.0.17 (from -r /tmp/venv1rx_ztgn/requirements.txt (line 5))
+[2025-01-19T21:44:37.947+0000] {process_utils.py:194} INFO -   Downloading python_multipart-0.0.17-py3-none-any.whl.metadata (1.8 kB)
+[2025-01-19T21:44:38.136+0000] {process_utils.py:194} INFO - Collecting scikit-learn==1.5.2 (from -r /tmp/venv1rx_ztgn/requirements.txt (line 6))
+[2025-01-19T21:44:38.152+0000] {process_utils.py:194} INFO -   Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2025-01-19T21:44:38.438+0000] {process_utils.py:194} INFO - Collecting scipy>=1.4.1 (from feature-engine==1.8.2->-r /tmp/venv1rx_ztgn/requirements.txt (line 1))
+[2025-01-19T21:44:38.459+0000] {process_utils.py:194} INFO -   Downloading scipy-1.15.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+[2025-01-19T21:44:38.723+0000] {process_utils.py:194} INFO - Collecting statsmodels>=0.11.1 (from feature-engine==1.8.2->-r /tmp/venv1rx_ztgn/requirements.txt (line 1))
+[2025-01-19T21:44:38.741+0000] {process_utils.py:194} INFO -   Downloading statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
+[2025-01-19T21:44:38.820+0000] {process_utils.py:194} INFO - Collecting python-dateutil>=2.8.2 (from pandas==2.2.3->-r /tmp/venv1rx_ztgn/requirements.txt (line 4))
+[2025-01-19T21:44:38.851+0000] {process_utils.py:194} INFO -   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2025-01-19T21:44:38.983+0000] {process_utils.py:194} INFO - Collecting pytz>=2020.1 (from pandas==2.2.3->-r /tmp/venv1rx_ztgn/requirements.txt (line 4))
+[2025-01-19T21:44:38.998+0000] {process_utils.py:194} INFO -   Downloading pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2025-01-19T21:44:39.077+0000] {process_utils.py:194} INFO - Collecting tzdata>=2022.7 (from pandas==2.2.3->-r /tmp/venv1rx_ztgn/requirements.txt (line 4))
+[2025-01-19T21:44:39.087+0000] {process_utils.py:194} INFO -   Downloading tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2025-01-19T21:44:39.153+0000] {process_utils.py:194} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn==1.5.2->-r /tmp/venv1rx_ztgn/requirements.txt (line 6))
+[2025-01-19T21:44:39.167+0000] {process_utils.py:194} INFO -   Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2025-01-19T21:44:39.207+0000] {process_utils.py:194} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.2.3->-r /tmp/venv1rx_ztgn/requirements.txt (line 4))
+[2025-01-19T21:44:39.220+0000] {process_utils.py:194} INFO -   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+[2025-01-19T21:44:39.447+0000] {process_utils.py:194} INFO - Collecting patsy>=0.5.6 (from statsmodels>=0.11.1->feature-engine==1.8.2->-r /tmp/venv1rx_ztgn/requirements.txt (line 1))
+[2025-01-19T21:44:39.497+0000] {process_utils.py:194} INFO -   Downloading patsy-1.0.1-py2.py3-none-any.whl.metadata (3.3 kB)
+[2025-01-19T21:44:39.557+0000] {process_utils.py:194} INFO - Collecting packaging>=21.3 (from statsmodels>=0.11.1->feature-engine==1.8.2->-r /tmp/venv1rx_ztgn/requirements.txt (line 1))
+[2025-01-19T21:44:39.579+0000] {process_utils.py:194} INFO -   Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+[2025-01-19T21:44:39.635+0000] {process_utils.py:194} INFO - Downloading feature_engine-1.8.2-py2.py3-none-any.whl (374 kB)
+[2025-01-19T21:44:39.752+0000] {process_utils.py:194} INFO - Downloading joblib-1.3.2-py3-none-any.whl (302 kB)
+[2025-01-19T21:44:39.859+0000] {process_utils.py:194} INFO - Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+[2025-01-19T21:44:44.425+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.0/18.0 MB 3.9 MB/s eta 0:00:00
+[2025-01-19T21:44:44.434+0000] {process_utils.py:194} INFO - Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2025-01-19T21:44:47.700+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 3.9 MB/s eta 0:00:00
+[2025-01-19T21:44:47.711+0000] {process_utils.py:194} INFO - Downloading python_multipart-0.0.17-py3-none-any.whl (24 kB)
+[2025-01-19T21:44:47.809+0000] {process_utils.py:194} INFO - Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2025-01-19T21:44:53.068+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 2.5 MB/s eta 0:00:00
+[2025-01-19T21:44:53.090+0000] {process_utils.py:194} INFO - Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2025-01-19T21:44:53.151+0000] {process_utils.py:194} INFO - Downloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2025-01-19T21:44:53.305+0000] {process_utils.py:194} INFO - Downloading scipy-1.15.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.2 MB)
+[2025-01-19T21:45:05.335+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.2/40.2 MB 3.3 MB/s eta 0:00:00
+[2025-01-19T21:45:05.348+0000] {process_utils.py:194} INFO - Downloading statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.7 MB)
+[2025-01-19T21:45:07.819+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 4.4 MB/s eta 0:00:00
+[2025-01-19T21:45:07.850+0000] {process_utils.py:194} INFO - Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2025-01-19T21:45:07.877+0000] {process_utils.py:194} INFO - Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2025-01-19T21:45:08.000+0000] {process_utils.py:194} INFO - Downloading packaging-24.2-py3-none-any.whl (65 kB)
+[2025-01-19T21:45:08.047+0000] {process_utils.py:194} INFO - Downloading patsy-1.0.1-py2.py3-none-any.whl (232 kB)
+[2025-01-19T21:45:08.139+0000] {process_utils.py:194} INFO - Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+[2025-01-19T21:45:08.434+0000] {process_utils.py:194} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, python-multipart, packaging, numpy, joblib, scipy, python-dateutil, patsy, scikit-learn, pandas, statsmodels, feature-engine
+[2025-01-19T21:45:28.482+0000] {process_utils.py:194} INFO - Successfully installed feature-engine-1.8.2 joblib-1.3.2 numpy-1.26.4 packaging-24.2 pandas-2.2.3 patsy-1.0.1 python-dateutil-2.9.0.post0 python-multipart-0.0.17 pytz-2024.2 scikit-learn-1.5.2 scipy-1.15.1 six-1.17.0 statsmodels-0.14.4 threadpoolctl-3.5.0 tzdata-2024.2
+[2025-01-19T21:45:29.086+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venv1rx_ztgn/bin/python /tmp/venv-calltu1kqt0l/script.py /tmp/venv-calltu1kqt0l/script.in /tmp/venv-calltu1kqt0l/script.out /tmp/venv-calltu1kqt0l/string_args.txt /tmp/venv-calltu1kqt0l/termination.log
+[2025-01-19T21:45:29.088+0000] {process_utils.py:190} INFO - Output:
+[2025-01-19T21:45:31.055+0000] {process_utils.py:194} INFO - pipeline guardado
+[2025-01-19T21:45:31.782+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-19T21:45:31.806+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-19T21:45:31.807+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=training_dag_v2, task_id=training_model, run_id=manual__2025-01-19T21:44:27.216723+00:00, execution_date=20250119T214427, start_date=20250119T214433, end_date=20250119T214531
+[2025-01-19T21:45:31.833+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-19T21:45:31.835+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-19T21:45:31.836+0000] {logging_mixin.py:190} INFO - Dag name:training_dag_v2 queued_at:2025-01-19 21:44:27.261931+00:00
+[2025-01-19T21:45:31.837+0000] {logging_mixin.py:190} INFO - Task hostname:6f89a35ca1b5 operator:_PythonVirtualenvDecoratedOperator
+[2025-01-19T21:45:31.864+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-19T21:45:31.908+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-19T21:45:31.914+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

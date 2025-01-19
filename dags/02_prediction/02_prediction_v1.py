@@ -48,15 +48,10 @@ default_args={
 )
 def predictiondag(): 
     set_var()
-    #resp = task_predict_model(data_preparation(), 
-    #                          local_execution_date)
     evaluate_predict_status(
         task_predict_model(
             data_preparation(),
             task_extract_execution_date())
             )
-    #task_to_fail()
     
-
-
 prediction_dag = predictiondag()

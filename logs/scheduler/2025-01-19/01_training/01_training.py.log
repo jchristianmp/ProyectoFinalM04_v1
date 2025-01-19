@@ -1,0 +1,176 @@
+[2025-01-19T21:39:19.917+0000] {processor.py:186} INFO - Started process (PID=89) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:39:19.919+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:39:19.922+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:19.922+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:39:20.433+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:39:20.623+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.623+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:training_dag
+[2025-01-19T21:39:20.637+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.637+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:training_dag
+[2025-01-19T21:39:20.646+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.646+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:training_dag
+[2025-01-19T21:39:20.660+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.660+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:training_dag
+[2025-01-19T21:39:20.678+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.678+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:training_dag
+[2025-01-19T21:39:20.690+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.690+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:training_dag
+[2025-01-19T21:39:20.700+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.700+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:training_dag
+[2025-01-19T21:39:20.701+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.701+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:39:20.725+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.725+0000] {dag.py:3262} INFO - Creating ORM DAG for training_dag
+[2025-01-19T21:39:20.727+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:20.727+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:39:20.756+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.847 seconds
+[2025-01-19T21:39:51.339+0000] {processor.py:186} INFO - Started process (PID=158) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:39:51.342+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:39:51.345+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:51.344+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:39:51.720+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:39:51.828+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:51.828+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:39:51.853+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:39:51.853+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:39:51.911+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.578 seconds
+[2025-01-19T21:40:22.117+0000] {processor.py:186} INFO - Started process (PID=228) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:40:22.118+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:40:22.122+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:22.121+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:40:22.264+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:40:22.325+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:22.324+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:40:22.346+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:22.346+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:40:22.373+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.263 seconds
+[2025-01-19T21:40:52.531+0000] {processor.py:186} INFO - Started process (PID=298) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:40:52.532+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:40:52.535+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:52.535+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:40:52.645+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:40:52.686+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:52.685+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:40:52.699+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:40:52.699+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:40:52.718+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.193 seconds
+[2025-01-19T21:41:22.901+0000] {processor.py:186} INFO - Started process (PID=368) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:41:22.904+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:41:22.907+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:22.906+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:41:23.090+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:41:23.197+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:23.196+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:41:23.230+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:23.229+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:41:23.277+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.394 seconds
+[2025-01-19T21:41:53.737+0000] {processor.py:186} INFO - Started process (PID=438) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:41:53.740+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:41:53.747+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:53.746+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:41:53.932+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:41:54.014+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:54.014+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:41:54.042+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:41:54.041+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:41:54.388+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.660 seconds
+[2025-01-19T21:42:24.843+0000] {processor.py:186} INFO - Started process (PID=504) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:42:24.845+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:42:24.849+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:24.848+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:42:25.067+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:42:25.131+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:25.131+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:42:25.148+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:25.148+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:42:25.644+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.813 seconds
+[2025-01-19T21:42:56.683+0000] {processor.py:186} INFO - Started process (PID=573) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:42:56.687+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:42:56.691+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:56.691+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:42:56.799+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:42:56.841+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:56.840+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:42:56.856+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:42:56.856+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:42:56.896+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.227 seconds
+[2025-01-19T21:43:27.057+0000] {processor.py:186} INFO - Started process (PID=643) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:43:27.059+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:43:27.063+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:27.063+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:43:27.202+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:43:27.262+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:27.262+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:43:27.278+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:27.277+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:43:27.303+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.255 seconds
+[2025-01-19T21:43:57.745+0000] {processor.py:186} INFO - Started process (PID=711) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:43:57.747+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:43:57.751+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:57.750+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:43:57.881+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:43:57.939+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:57.939+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:43:57.953+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:43:57.952+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:43:57.978+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.241 seconds
+[2025-01-19T21:44:28.157+0000] {processor.py:186} INFO - Started process (PID=780) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:44:28.159+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:44:28.163+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:28.163+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:44:28.336+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:44:28.380+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:28.379+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:44:28.394+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:28.394+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:44:28.418+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.270 seconds
+[2025-01-19T21:44:58.700+0000] {processor.py:186} INFO - Started process (PID=850) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:44:58.701+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:44:58.704+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:58.703+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:44:58.836+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:44:58.879+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:58.879+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:44:58.893+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:44:58.893+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:44:58.911+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.218 seconds
+[2025-01-19T21:45:29.155+0000] {processor.py:186} INFO - Started process (PID=920) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:45:29.157+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:45:29.159+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:29.159+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:45:29.339+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:45:29.383+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:29.383+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:45:29.397+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:29.396+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:45:29.419+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.269 seconds
+[2025-01-19T21:45:59.600+0000] {processor.py:186} INFO - Started process (PID=989) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:45:59.604+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:45:59.614+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:59.614+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:45:59.876+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:45:59.925+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:59.924+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:45:59.950+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:45:59.949+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:46:00.012+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.421 seconds
+[2025-01-19T21:46:30.772+0000] {processor.py:186} INFO - Started process (PID=1058) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:46:30.773+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:46:30.776+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:46:30.776+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:46:30.893+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:46:30.938+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:46:30.938+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:46:30.956+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:46:30.956+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:46:30.979+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.215 seconds
+[2025-01-19T21:47:01.275+0000] {processor.py:186} INFO - Started process (PID=1132) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:47:01.277+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:47:01.280+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:01.280+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:47:01.414+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:47:01.458+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:01.458+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:47:01.479+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:01.479+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:47:01.506+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.237 seconds
+[2025-01-19T21:47:31.693+0000] {processor.py:186} INFO - Started process (PID=1202) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:47:31.694+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:47:31.697+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:31.697+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:47:31.876+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:47:31.920+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:31.920+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:47:31.934+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:47:31.934+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:47:31.954+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.270 seconds
+[2025-01-19T21:48:02.110+0000] {processor.py:186} INFO - Started process (PID=1271) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:48:02.112+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:48:02.114+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:48:02.114+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:48:02.235+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:48:02.279+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:48:02.279+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:48:02.294+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:48:02.293+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:48:02.441+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.337 seconds
+[2025-01-19T21:48:32.761+0000] {processor.py:186} INFO - Started process (PID=1339) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:48:32.763+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:48:32.769+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:48:32.768+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:48:32.972+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:48:33.016+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:48:33.015+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:48:33.032+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:48:33.032+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:48:33.459+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.710 seconds
+[2025-01-19T21:49:04.038+0000] {processor.py:186} INFO - Started process (PID=1407) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:49:04.042+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:49:04.048+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:04.047+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:49:04.228+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:49:04.306+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:04.305+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:49:04.327+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:04.327+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:49:04.355+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.336 seconds
+[2025-01-19T21:49:34.586+0000] {processor.py:186} INFO - Started process (PID=1476) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:49:34.587+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:49:34.590+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:34.590+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:49:34.699+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:49:34.774+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:34.774+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:49:34.804+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:49:34.804+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:49:34.834+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.254 seconds
+[2025-01-19T21:50:05.418+0000] {processor.py:186} INFO - Started process (PID=1545) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:50:05.423+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:50:05.426+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:05.426+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:50:05.574+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:50:05.625+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:05.625+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:50:05.639+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:05.639+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:50:05.658+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.236 seconds
+[2025-01-19T21:50:36.115+0000] {processor.py:186} INFO - Started process (PID=1614) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:50:36.117+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:50:36.120+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:36.119+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:50:36.249+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:50:36.302+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:36.302+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:50:36.316+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:50:36.316+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:50:36.338+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.228 seconds
+[2025-01-19T21:51:07.009+0000] {processor.py:186} INFO - Started process (PID=1683) to work on /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:51:07.011+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_training/01_training.py for tasks to queue
+[2025-01-19T21:51:07.013+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:51:07.013+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:51:07.150+0000] {processor.py:925} INFO - DAG(s) 'training_dag' retrieved from /opt/airflow/dags/01_training/01_training.py
+[2025-01-19T21:51:07.197+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:51:07.197+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-19T21:51:07.212+0000] {logging_mixin.py:190} INFO - [2025-01-19T21:51:07.212+0000] {dag.py:4180} INFO - Setting next_dagrun for training_dag to None, run_after=None
+[2025-01-19T21:51:07.231+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_training/01_training.py took 0.228 seconds

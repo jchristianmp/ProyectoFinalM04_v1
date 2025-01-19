@@ -34,6 +34,5 @@ default_args={
 )
 def trainingdag():
     training_model()
-    #pull_xcom()
 
 training_dag = trainingdag()
